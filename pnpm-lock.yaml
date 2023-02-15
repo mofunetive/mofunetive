@@ -144,7 +144,7 @@ importers:
       typescript: ^4.9.5
       typescript-transform-paths: ^3.4.6
       vite: ^4.1.1
-      whatwg-url: 5.0.0
+      whatwg-url: 12.0.0
     dependencies:
       '@mofunetive/api': link:../library/api
       '@mofunetive/metadata': link:../library/metadata
@@ -153,7 +153,7 @@ importers:
       gsap: 3.11.4
       mongodb: 5.0.1
       once: 1.4.0
-      whatwg-url: 5.0.0
+      whatwg-url: 12.0.0
     devDependencies:
       '@fontsource/fira-mono': 4.5.10
       '@neoconfetti/svelte': 1.0.0
@@ -6851,6 +6851,14 @@ packages:
   /whatwg-url/11.0.0:
     resolution: {integrity: sha512-RKT8HExMpoYx4igMiVMY83lN6UeITKJlBQ+vR/8ZJ8OCdSiN3RwCq+9gH0+Xzj0+5IrM6i4j/6LuvzbZIQgEcQ==}
     engines: {node: '>=12'}
+    dependencies:
+      tr46: 3.0.0
+      webidl-conversions: 7.0.0
+    dev: false
+
+  /whatwg-url/12.0.0:
+    resolution: {integrity: sha512-N2SCrbcSPw0gDyNqE+y5qH1gqiOe+HagWfgRJy2SmDO3C23mISmJhQ3zvZljBv2DWfBdLXypAtecWYZ+mg1krQ==}
+    engines: {node: '>=14'}
     dependencies:
       tr46: 3.0.0
       webidl-conversions: 7.0.0
