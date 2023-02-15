@@ -1,0 +1,22 @@
+{
+	"npm.runSilent": true,
+	"npm.packageManager": "pnpm",
+	"typescript.suggest.autoImports": true,
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"files.exclude": {
+		"**/node_modules/": true,
+		"web/.svelte-kit/": true
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	}
+}

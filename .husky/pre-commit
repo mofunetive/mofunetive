@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "→ husky (pre-commit)"
+
+if [ $(pnpm -v) ]; then
+   pnpm run --silent pre-commit
+else
+   if [[ "$OSTYPE" == *"linux"* ]]; then
+      echo "❌ Please using cli to commit"
+      echo "github desktop not supported on "$OSTYPE""
+      echo ""
+      echo "ⓘ example: pnpm run (cz|commit) or git commit"
+      exit 127
+   else
+      echo "❌ This project use pnpm." && exit 127
+   fi
+fi

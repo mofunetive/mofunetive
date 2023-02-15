@@ -1,0 +1,8 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "@mofunetive/metadata",
+	"extends": "../tsconfig.base.json",
+	"include": [
+		"**.ts"
+	]
+}

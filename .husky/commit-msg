@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "→ husky (commit-msg)"
+
+if [ $(pnpm -v) ]; then
+  pnpm commitlint --edit $1
+elif [ $(npx -v) ]; then
+  npx commitlint --edit $1
+else
+  echo "❌ This project use (pnpm|npx)."
+fi

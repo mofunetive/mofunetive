@@ -1,0 +1,49 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "📁 Root"
+        },
+        {
+            "path": "./.github/",
+            "name": "😺 GitHub"
+        },
+        {
+            "path": "./library",
+            "name": "📚 Library"
+        },
+        {
+            "path": "./library/api",
+            "name": "🖇️ API"
+        },
+        {
+            "path": "./library/metadata",
+            "name": "📑 Metadata"
+        },
+        {
+            "path": "./library/database",
+            "name": "📝 Database",
+        },
+        {
+            "path": "./web",
+            "name": "🌐 WebSite"
+        },
+    ],
+    
+    "settings": {
+        "npm.runSilent": true,
+        "npm.packageManager": "pnpm",
+        "npm.scriptExplorerAction": "run",
+        "npm.scriptExplorerExclude": ["!","preinstall","bump*","changelog:*"],
+        "typescript.suggest.autoImports": true,
+        "files.exclude": {
+            ".github/": true,
+            "**/node_modules/": true,
+            "library/": true,
+            "**/dist/": true,
+            "**/lib-esm/": true,
+            "web/": true,
+            "web/.svelte-kit/": true
+        }
+    }
+}

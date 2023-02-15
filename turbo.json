@@ -1,0 +1,29 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"build": {
+			"dependsOn": ["^build-esm", "^build"],
+			"outputs": [".svelte-kit/**", "dist/**"]
+		},
+		"build-esm": {
+			"dependsOn": ["^build-esm"],
+			"outputs": ["dist/**", "lib-esm/**"]
+		},
+		"test": {
+			"dependsOn": ["^build"],
+			"outputs": []
+		},
+		"lint": {
+			"outputs": []
+		},
+		"dev": {
+			"cache": true
+		},
+		"start": {
+			"cache": true
+		},
+		"clean": {
+			"cache": false
+		}
+	}
+}

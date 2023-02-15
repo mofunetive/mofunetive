@@ -1,0 +1,94 @@
+{
+	"private": true,
+	"name": "mofunetive",
+	"version": "1.0.0",
+	"license": "MPL-2.0",
+	"type": "module",
+	"scripts": {
+		"build": "turbo run build",
+		"build-lib": "turbo run build-esm --scope=*@* --no-deps",
+		"bump-version": "pnpm --filter=* ci:bump",
+		"changelog:generate": "pnpm changelog:update -r 0",
+		"changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s",
+		"clean": "pnpm --filter=* clean",
+		"clean:full": "pnpm clean && pnpm clean:node_modules && pnpm install",
+		"clean:node_modules": "pnpx rimraf@3.0.2 './**/node_modules'",
+		"commit": "pnpm run --silent cz",
+		"cz": "git reset && git add . && git-cz && git push",
+		"dev": "turbo run dev",
+		"fix": "pnpm --filter=* lint:fix",
+		"format": "prettier --write .",
+		"preinstall": "npx only-allow pnpm",
+		"lint": "turbo run lint",
+		"prepack": "pnpm run clean",
+		"pnpm-update:check": "pnpm outdated --recursive --long",
+		"pnpm-update:choose": "pnpm pnpm-update:force --workspace --interactive",
+		"pnpm-update:force": "pnpm update --recursive --prod",
+		"pre-commit": "pnpm lint-staged",
+		"pre-push": "pnpm --silent lint",
+		"prepare": "is-ci || husky install",
+		"prettier": "pnpm -w --filter=* format --list-different",
+		"prettier:json": "pnpm prettier-package-json --write '**/package.json' --use-tabs false",
+		"start": "turbo run start",
+		"web": "pnpm --filter=website"
+	},
+	"config": {
+		"commitizen": {
+			"path": "@commitlint/cz-commitlint"
+		}
+	},
+	"workspaces": [
+		"library/**",
+		"web/**"
+	],
+	"devDependencies": {
+		"@commitlint/cli": "^17.4.2",
+		"@commitlint/config-conventional": "^17.4.2",
+		"@commitlint/cz-commitlint": "^17.4.2",
+		"@jsdevtools/version-bump-prompt": "^6.1.0",
+		"commitizen": "^4.3.0",
+		"conventional-changelog-cli": "^2.2.2",
+		"git-format-staged": "^3.0.0",
+		"husky": "^8.0.0",
+		"inquirer": "8",
+		"is-ci": "^3.0.1",
+		"lint-staged": "^13.1.0",
+		"prettier": "^2.8.3",
+		"prettier-package-json": "^2.8.0",
+		"pretty-quick": "^3.1.3",
+		"rimraf": "3.0.2",
+		"turbo": "^1.7.2"
+	},
+	"engines": {
+		"node": ">=16.x"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pnpm lint-staged",
+			"pre-push": "pnpm run --silent lint"
+		}
+	},
+	"lint-staged": {
+		"*.json": [
+			"prettier --write"
+		],
+		"package.json": [
+			"prettier-package-json --write --use-tabs false"
+		],
+		"library/**": [
+			"prettier --plugin-search-dir --write"
+		],
+		"web/**": [
+			"eslint -c './web/.eslintrc.cjs' --fix",
+			"prettier --plugin-search-dir --config './web/.prettierrc' --write"
+		]
+	},
+	"packageManager": "pnpm@7.25.0",
+	"pnpm": {
+		"updateConfig": {
+			"ignoreDependencies": [
+				"before-after-hook"
+			]
+		}
+	}
+}
