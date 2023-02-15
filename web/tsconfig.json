@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"files": ["./package.json", "../package.json"],
+	"compilerOptions": {
+		"allowJs": true,
+		"composite": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"moduleResolution": "node"
+	},
+	"extends": "./.svelte-kit/tsconfig.json",
+	"include": ["./package.json", "../package.json"]
+}

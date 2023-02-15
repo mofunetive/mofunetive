@@ -1,0 +1,63 @@
+{
+	"private": true,
+	"name": "website",
+	"version": "1.0.0",
+	"license": "MPL-2.0",
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"clean": "rimraf .svelte-kit build",
+		"dev": "vite dev",
+		"format": "prettier --plugin-search-dir . --write .",
+		"format:check": "prettier --plugin-search-dir . --check",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"preview": "vite preview",
+		"test": "playwright test"
+	},
+	"dependencies": {
+		"@mofunetive/api": "workspace:*",
+		"@mofunetive/metadata": "workspace:^1.0.0",
+		"@tailwindcss/line-clamp": "^0.4.2",
+		"before-after-hook": "2.2.3",
+		"gsap": "^3.11.4",
+		"mongodb": "^5.0.0",
+		"once": "1.4.0",
+		"whatwg-url": "5.0.0"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^4.5.10",
+		"@neoconfetti/svelte": "^1.0.0",
+		"@playwright/test": "^1.30.0",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.5.0",
+		"@types/cookie": "^0.5.1",
+		"@types/node": "^18.13.0",
+		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/parser": "^5.51.0",
+		"autoprefixer": "^10.4.13",
+		"eslint": "^8.33.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"postcss": "^8.4.21",
+		"prettier": "^2.8.3",
+		"prettier-plugin-svelte": "^2.9.0",
+		"svelte": "^3.55.1",
+		"svelte-check": "^3.0.3",
+		"tailwindcss": "^3.2.4",
+		"ts-node": "^10.9.1",
+		"tslib": "^2.5.0",
+		"typescript": "^4.9.5",
+		"typescript-transform-paths": "^3.4.6",
+		"vite": "^4.1.1"
+	},
+	"pnpm": {
+		"updateConfig": {
+			"ignoreDependencies": [
+				"before-after-hook"
+			]
+		}
+	}
+}
