@@ -73,7 +73,9 @@ jobs:
         name: Bump Version
         needs: [test]
         runs-on: ubuntu-latest
-        if: ${{ github.event.inputs.nobumpversion == 'false' }}
+        if: |
+            always() && github.event.inputs.nobumpversion == 'false' &&
+            !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
         steps:
             - name: Checkout
               uses: actions/checkout@v3
