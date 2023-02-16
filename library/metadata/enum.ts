@@ -1,6 +1,6 @@
 export enum Discord {
-	invite_url = "https://discord.gg/NeZcH9XY",
-	invite_code = "NeZcH9XY",
+	invite_url = "https://discord.gg/nE6mXG455V",
+	invite_code = "nE6mXG455V",
 }
 
 export enum Github {
