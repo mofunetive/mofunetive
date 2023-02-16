@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"@mofunetive/api": "workspace:*",
-		"@mofunetive/metadata": "workspace:^1.0.0",
+		"@mofunetive/metadata": "workspace:*",
 		"@tailwindcss/line-clamp": "^0.4.2",
 		"before-after-hook": "2.2.3",
 		"gsap": "^3.11.4",

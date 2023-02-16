@@ -117,7 +117,7 @@ importers:
     specifiers:
       '@fontsource/fira-mono': ^4.5.10
       '@mofunetive/api': workspace:*
-      '@mofunetive/metadata': workspace:^1.0.0
+      '@mofunetive/metadata': workspace:*
       '@neoconfetti/svelte': ^1.0.0
       '@playwright/test': ^1.30.0
       '@sveltejs/adapter-auto': ^2.0.0
