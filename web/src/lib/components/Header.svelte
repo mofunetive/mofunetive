@@ -25,7 +25,7 @@
 </script>
 
 <header
-	class="navbar sticky flex w-fit top-6 m-auto mt-4 mx-4 lg:-mb-8 lg:mr-16 self-center lg:self-end rounded-3xl shadow-xl justify-between z-40 bg-white bg-opacity-50 backdrop-blur-xl border-white border-2 text-black dark:bg-[#505050] dark:text-white"
+	class="navbar sticky flex w-fit top-6 m-auto mt-4 mx-4 lg:-mb-8 lg:mr-16 self-center lg:self-end rounded-3xl shadow-xl justify-between z-40 bg-white border-white border-2 text-black dark:bg-[#505050] dark:text-white"
 >
 	<div class="corner">
 		<a href="/" class="object">

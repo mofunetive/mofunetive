@@ -7,9 +7,9 @@
 		font-family: 'Kanit';
 		src: url('lib/fonts/Kanit.ttf');
 	}
-	html {
+
+	* {
 		font-family: 'Kanit', sans-serif;
-		color: #303030;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		-webkit-user-select: none;
@@ -17,5 +17,13 @@
 		-ms-user-select: none;
 		user-select: none;
 		cursor: none;
+	}
+
+	button {
+		cursor: none;
+	}
+	
+	img {
+		pointer-events: none;
 	}
 }
