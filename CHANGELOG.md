@@ -1,4 +1,8 @@
-# 1.0.0 (2023-02-15)
+## [1.0.1](https://github.com/mofunetive/mofunetive/compare/v1.0.0...v1.0.1) (2023-02-16)
+
+
+
+# [1.0.0](https://github.com/mofunetive/mofunetive/compare/1a04c086351380ffb8c9baa1ab3f1aa568aa56c7...v1.0.0) (2023-02-15)
 
 
 ### Features
