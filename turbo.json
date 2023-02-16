@@ -3,7 +3,8 @@
 	"pipeline": {
 		"build": {
 			"dependsOn": ["^build-esm", "^build"],
-			"outputs": [".svelte-kit/**", "dist/**"]
+			"outputs": ["dist/**", ".svelte-kit/**"],
+			"cache": false
 		},
 		"build-esm": {
 			"dependsOn": ["^build-esm"],
