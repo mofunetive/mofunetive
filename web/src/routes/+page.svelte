@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
-	import animation from '$animation/homepage';
+	import animation from '$animation/main';
 	import MetaData from '@mofunetive/metadata';
 
 	import Member from '$component/main/Member.svelte';

@@ -6,8 +6,6 @@
 	import Header from '$component/Header.svelte';
 	// import Nightmode from '$component/Nightmode.svelte';
 	import Footer from '$component/Footer.svelte';
-
-	console.log('%cขออภัยถ้าเขียนเว็บดีเกินไป >_<', 'color:red; font-size: 50px;');
 </script>
 
 <div class="app flex flex-col min-h-screen bg-white dark:bg-[#303030] overflow-x-clip">
@@ -17,7 +15,7 @@
 
 	<Header />
 
-	<main class=" w-full flex flex-col flex-1 p-4 lg:p-10">
+	<main class="max-w-full flex flex-col flex-1 p-4 lg:px-10">
 		<slot />
 	</main>
 

@@ -43,7 +43,7 @@
 							/>
 						</div>
 						<div class=" h-36 w-full 2xl:w-[80%] mt-4 bg-white rounded-3xl ">
-							<div class="content h-full w-full relative p-4 pr-2 pb-12 ">
+							<div class="content h-full w-full relative p-4 pr-2 pb-12 text-[#505050]">
 								<h1 class=" text-xl font-semibold">{Members[Members.length - 1].login}</h1>
 								<p class=" line-clamp-2">{Members[Members.length - 1].bio}</p>
 								<div class="contact absolute right-4 bottom-4 flex ">
@@ -60,7 +60,7 @@
 								<img class=" h-full w-full object-cover rounded-full border-4 border-white text-center " src={userData.avatar_url} alt="gh_profile_image" loading="lazy" />
 							</div>
 							<div class=" h-36 w-full 2xl:w-[80%] mt-4 bg-white rounded-3xl">
-								<div class="content h-full relative p-4 pr-2 pb-12">
+								<div class="content h-full relative p-4 pr-2 pb-12 text-[#505050]">
 									<h1 class=" text-xl font-semibold">{userData.login}</h1>
 									<p class=" line-clamp-2">{userData.bio}</p>
 									<div class="contact absolute right-4 bottom-4 flex ">

@@ -37,15 +37,14 @@
 						<div class=" h-52 w-full relative flex">
 							<img class=" absolute max-h-full max-w-full m-auto inset-0 object-cover rounded-3xl shadow-2xl" src={gh_Project.images} alt="Image_Project" loading="lazy" />
 						</div>
-						<div class=" mt-8">
+						<div class=" mt-8 text-[#505050]">
 							<h1 class=" text-2xl lg:text-3xl line-clamp-1">{gh_Project.name}</h1>
 							<p class=" ml-4 line-clamp-5">{gh_Project.description ? gh_Project.description : 'no information'}</p>
 							<div class=" absolute bottom-8 w-full">
 								<h1 class=" lg:text-xl max-w-[50%] line-clamp-1">By: {gh_Project.owner.login}</h1>
 							</div>
 							<a href={gh_Project.html_url} class="object absolute w-fit p-2 px-4 bottom-8 right-8 rounded-lg text-xl text-white bg-[#303030] transition-colors hover:bg-[#505050]"
-								>more</a
-							>
+								target="_blank" rel="noreferrer">more</a>
 						</div>
 					</div>
 				{/each}
