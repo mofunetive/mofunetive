@@ -21,9 +21,8 @@
 						ทีมพัฒนาหลายๆสิ่งให้ดีเท่าที่เราทำได้มากที่สุด คนที่ชื่นชอบในการ"สร้าง" หรือ "พัฒนา"สิ่งใหม่ๆ สำหรับทีมเรานั้น ต้องการคนอย่างคุณ!<br />
 						ในส่วนของงานหรือโปรเจคจะเป็นเหมือนการพัฒนาสกิลหรือฝีมือของแต่ละคน คนที่มีใจรักและอยากจะพัฒนาส่วนที่ตัวเองไม่เก่ง สามารถเสนอความสามารถและผลงานของคุณได้ผ่านทางดิสคอร์ด<br
 						/>ทั้งนี้ขอบคุณที่แวะมาชมผลงานของเรา หากมีข้อแนะนำหรืออยากแสดงความคิดเห็นก็เข้ามาดิสคอร์ดของเราเพื่อพูดคุยและปรึกษาหารือได้ที่
-						<a href={Discord.invite_url} class="object underline hover:text-red-300 hover:mix-blend-difference" target="_blank" rel="noreferrer">
-							คลิกที่นี้
-						</a> หรือ Discord Invite code : hHkP5S6p7Y ได้เลย!
+						<a href={Discord.invite_url} class="object underline hover:text-red-300 hover:mix-blend-difference" target="_blank" rel="noreferrer"> คลิกที่นี้ </a> หรือ Discord Invite
+						code : hHkP5S6p7Y ได้เลย!
 					</p>
 				</div>
 			</div>
@@ -52,8 +51,12 @@
 		</div>
 
 		<div class=" w-full mt-8 xl:mt-4 flex">
-			<a href={Discord.invite_url} class="object w-fit m-auto mr-12 xl:mr-20 hover:mr-16 transition-all p-2 px-4 bottom-8 rounded-lg text-xl text-[#303030] bg-white z-10"
-			target="_blank" rel="noreferrer">
+			<a
+				href={Discord.invite_url}
+				class="object w-fit m-auto mr-12 xl:mr-20 hover:mr-16 transition-all p-2 px-4 bottom-8 rounded-lg text-xl text-[#303030] bg-white z-10"
+				target="_blank"
+				rel="noreferrer"
+			>
 				Join now!
 			</a>
 		</div>

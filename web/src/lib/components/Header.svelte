@@ -14,13 +14,17 @@
 			top: '0.5rem',
 			right: window.innerWidth > 1024 ? '1.5rem' : 0,
 			duration: 0.25,
-			ease: "linear",
+			ease: 'linear',
 			scrollTrigger: {
 				start: '25rem',
 				toggleActions: 'play none none reverse'
 			},
-			onComplete:() => { document.getElementById('nav')?.classList.add('shadow-2xl'); },
-			onReverseComplete:() => { document.getElementById('nav')?.classList.remove('shadow-2xl'); }
+			onComplete: () => {
+				document.getElementById('nav')?.classList.add('shadow-2xl');
+			},
+			onReverseComplete: () => {
+				document.getElementById('nav')?.classList.remove('shadow-2xl');
+			}
 		});
 	});
 </script>

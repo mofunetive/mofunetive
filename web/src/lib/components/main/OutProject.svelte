@@ -18,46 +18,47 @@
 		<div class="out_project flex mx-8 lg:mx-16 lg:p-12 bg-white bg-opacity-30 backdrop-blur-md rounded-3xl z-10">
 			<div class="h-fit w-full lg:w-[70%] lg:mr-8 rounded-3xl bg-white">
 				<div class="project_video max-h-96 max-w-full m-auto rounded-3xl bg-red-400">
-					<img class="max-h-96 min-w-full object-cover rounded-3xl" src="https://media.tenor.com/rV8mpdXgZpAAAAAd/i-show-speed-speed.gif" alt="video">
+					<img class="max-h-96 min-w-full object-cover rounded-3xl" src="https://media.tenor.com/rV8mpdXgZpAAAAAd/i-show-speed-speed.gif" alt="video" />
 				</div>
 				<div class="project_text h-fit relative p-8 overflow-hidden">
 					<button class="project_button object w-fit absolute m-auto -mt-6 left-0 right-0 rounded-full">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" w-10 h-10 pointer-events-none">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-						  </svg>  
+						</svg>
 					</button>
 					<div class="project_text_content mb-8 text-[#505050]">
-						<button
-							class="project_closeBtn object absolute w-fit -mt-4 right-0 px-4 py-2 rounded-full text-xl text-white bg-[#303030] transition-colors hover:bg-[#505050]">
+						<button class="project_closeBtn object absolute w-fit -mt-4 right-0 px-4 py-2 rounded-full text-xl text-white bg-[#303030] transition-colors hover:bg-[#505050]">
 							X
 						</button>
-						<h1 class=" text-3xl">Project : {"อะไรก็ไม่รู้1"}</h1>
-						<h1 class=" text-xl ">Description : {"บลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลา"}</h1>
-						<h1 class=" text-xl ">จุดประสงค์ : {"เพื่อความสนุก"}</h1>
-						<h1 class=" text-xl ">ระยะเวลา : {"~10-15 สัปดาร์"}</h1>
-						<a
-							href={"#"}
-							class="link_project object absolute w-fit right-0 px-4 py-2 rounded-full text-xl text-white bg-[#303030] transition-colors hover:bg-[#505050]">
+						<h1 class=" text-3xl">Project : {'อะไรก็ไม่รู้1'}</h1>
+						<h1 class=" text-xl ">Description : {'บลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลา'}</h1>
+						<h1 class=" text-xl ">จุดประสงค์ : {'เพื่อความสนุก'}</h1>
+						<h1 class=" text-xl ">ระยะเวลา : {'~10-15 สัปดาร์'}</h1>
+						<a href={'#'} class="link_project object absolute w-fit right-0 px-4 py-2 rounded-full text-xl text-white bg-[#303030] transition-colors hover:bg-[#505050]">
 							Link To Project
 						</a>
 					</div>
 				</div>
 			</div>
 
-			
 			<div class="flex flex-col m-auto ">
 				<button class="project_up object m-auto p-4 text-white rounded-full">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 pointer-events-none">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-					</svg>	  
+					</svg>
 				</button>
 
 				<div class="project_box hidden lg:block w-80 m-auto p-4 rounded-3xl bg-white">
 					<div class="h-40 w-full relative flex">
-						<img class=" absolute max-h-full max-w-full m-auto inset-0 object-cover rounded-3xl shadow-2xl" src={"https://i.ytimg.com/vi/HCz3JVH0h9c/maxresdefault.jpg"} alt="project_box_image" loading="lazy" />
+						<img
+							class=" absolute max-h-full max-w-full m-auto inset-0 object-cover rounded-3xl shadow-2xl"
+							src={'https://i.ytimg.com/vi/HCz3JVH0h9c/maxresdefault.jpg'}
+							alt="project_box_image"
+							loading="lazy"
+						/>
 					</div>
 					<div class="project_box_info text-[#505050]">
-						<h1 class=" mt-4 lg:text-2xl font-bold line-clamp-1">{"gitRepo.name"}</h1>
+						<h1 class=" mt-4 lg:text-2xl font-bold line-clamp-1">{'gitRepo.name'}</h1>
 						<p class="info_project line-clamp-2 break-words">
 							{"gitRepo.description ? gitRepo.description : 'no information'"}
 						</p>
@@ -67,7 +68,7 @@
 				<button class="project_down object m-auto p-4 text-white rounded-full">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 pointer-events-none">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-					  </svg>
+					</svg>
 				</button>
 			</div>
 		</div>
