@@ -130,7 +130,7 @@ importers:
       '@types/cookie': ^0.5.1
       '@types/node': ^18.13.0
       autoprefixer: ^10.4.13
-      before-after-hook: 2.2.3
+      before-after-hook: 3.0.2
       eslint-plugin-svelte3: ^4.0.0
       gsap: ^3.11.4
       mongodb: ^5.0.0
@@ -151,7 +151,7 @@ importers:
       '@mofunetive/api': link:../library/api
       '@mofunetive/metadata': link:../library/metadata
       '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.6
-      before-after-hook: 2.2.3
+      before-after-hook: 3.0.2
       gsap: 3.11.4
       mongodb: 5.0.1
       once: 1.4.0
@@ -2364,6 +2364,10 @@ packages:
 
   /before-after-hook/2.2.3:
     resolution: {integrity: sha512-NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==}
+    dev: false
+
+  /before-after-hook/3.0.2:
+    resolution: {integrity: sha512-Nik3Sc0ncrMK4UUdXQmAnRtzmNQTAAXmXIopizwZ1W1t8QmfJj+zL4OA2I7XPTPW5z5TDqv4hRo/JzouDJnX3A==}
     dev: false
 
   /big.js/5.2.2:

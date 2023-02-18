@@ -21,7 +21,7 @@
 		"@mofunetive/api": "workspace:*",
 		"@mofunetive/metadata": "workspace:*",
 		"@tailwindcss/line-clamp": "^0.4.2",
-		"before-after-hook": "2.2.3",
+		"before-after-hook": "3.0.2",
 		"gsap": "^3.11.4",
 		"mongodb": "^5.0.0",
 		"once": "1.4.0",
