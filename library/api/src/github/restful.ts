@@ -1,4 +1,5 @@
 import { Axios, AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
+
 import type { GetAll, GetProject, Octokit as OctokitType } from "./types";
 
 export class RESTfulAPI extends Axios {

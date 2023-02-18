@@ -1,6 +1,7 @@
-import { Axios, AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { Discord as Metadata } from "@mofunetive/metadata";
+import { Axios, AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { Snowflake } from "discord-api-types/v10";
+
 import { Member } from "./types";
 
 export class DiscordAPI extends Axios {

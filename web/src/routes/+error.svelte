@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 	import gsap from 'gsap';
 	import { CustomEase } from 'gsap/all';
+	import { onMount } from 'svelte';
+
+	import { page } from '$app/stores';
 
 	const ranWord = ['ไม่พบหน้าที่ค้นหา', 'หาหน้าไรอยู่อ่ะ', 'ชายสี่บะหมี่เกี๊ยว', 'ที่นี้ที่ไหน', 'นายหลงทางมาสินะ'];
 

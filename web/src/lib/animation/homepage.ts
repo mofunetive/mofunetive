@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { ScrollTrigger, CustomEase, Flip, Elastic } from 'gsap/all';
+import { CustomEase, Elastic, Flip, ScrollTrigger } from 'gsap/all';
 
 class animation {
 	constructor() {

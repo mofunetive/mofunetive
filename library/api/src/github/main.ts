@@ -1,7 +1,8 @@
-import type { GetAll, GetProject, GetRepository, GetImages, GetMembers, Octokit as OctokitType } from "./types";
 import MetaData from "@mofunetive/metadata";
-import { Octokit } from "@octokit/rest";
 import { Organization, Repository, UserStatusEdge } from "@octokit/graphql-schema";
+import { Octokit } from "@octokit/rest";
+
+import type { GetAll, GetImages, GetMembers, GetProject, GetRepository, Octokit as OctokitType } from "./types";
 
 /**
  * @desc GitHub API

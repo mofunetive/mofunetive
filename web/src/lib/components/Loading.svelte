@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
+
 	import { navigating } from '$app/stores';
 
 	const loading = writable(false);

@@ -1,5 +1,5 @@
-import type { Endpoints } from "@octokit/types";
 import type { components, operations } from "@octokit/openapi-types";
+import type { Endpoints } from "@octokit/types";
 
 export interface GetAll {
 	parameters: { Repository?: GetRepository["parameters"] };
