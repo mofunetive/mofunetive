@@ -85,7 +85,7 @@ class animation {
 				gsap.to(projectBoxContent, {
 					autoAlpha: 0,
 					onComplete: () => {
-						gsap.to(projectBoxContent, { height: 0, marginTop:0 });
+						gsap.to(projectBoxContent, { height: 0, marginTop: 0 });
 					}
 				});
 
@@ -125,7 +125,7 @@ class animation {
 
 						gsap.to(projectBoxContent, {
 							height: 'auto',
-							marginTop:"1rem",
+							marginTop: '1rem',
 							duration: 1,
 							onComplete: () => {
 								gsap.to(projectBoxContent, { autoAlpha: 1 });

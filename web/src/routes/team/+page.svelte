@@ -1,14 +1,14 @@
 <script lang="ts">
-	import gsap from "gsap";
-	import { onMount } from "svelte";
+	import gsap from 'gsap';
+	import { onMount } from 'svelte';
 
 	onMount(() => {
-		gsap.set('.member', { width: "35%", duration: 1 });
+		gsap.set('.member', { width: '35%', duration: 1 });
 
 		gsap.to('.member', {
-			width: "80%",
+			width: '80%',
 			duration: 1,
-			stagger: 0.2,
+			stagger: 0.2
 		});
 	});
 </script>
@@ -20,7 +20,7 @@
 
 <section>
 	<div class="max-w-full lg:max-w-6xl m-auto lg:p-4 text-column">
-		<div class="bg "></div>
+		<div class="bg " />
 		<div class="dev-team">
 			<h1 class="dev-team-text w-fit text-4xl p-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500 via-purple-400 animate-text">Develop Team</h1>
 			<div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-4">
