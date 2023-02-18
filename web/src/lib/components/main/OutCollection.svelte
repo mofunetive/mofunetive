@@ -10,10 +10,10 @@
 	</video>
 
 	<div class="bg-cover absolute h-full w-full bg-black bg-opacity-30 rounded-3xl" />
-	<div class=" pt-16 pb-10">
+	<div class="flex flex-col pt-16 pb-10">
 		<h1 class="out-col object w-fit bg-[#303030] rounded-xl m-auto px-8 py-2 text-3xl text-center text-white">Our Collections</h1>
 
-		<div class="silder flex flex-wrap mt-8 justify-center">
+		<div class="silder grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 m-auto mt-8">
 			{#await mainData}
 				<div class=" relative h-[34rem] w-[22rem] xl:hover:scale-105 transition-transform flex m-6 p-8 rounded-3xl bg-white flex-col">
 					<div class=" h-52 w-full relative bg-gray-300 rounded-3xl animate-pulse" />
@@ -33,7 +33,7 @@
 				</div>
 			{:then data}
 				{#each data as gh_Project}
-					<div class="projects relative h-[34rem] w-[22rem] flex m-6 p-8 rounded-3xl bg-white flex-col ">
+					<div class="projects relative h-[34rem] w-[19rem] lg:w-[22rem] flex m-2 lg:m-6 p-4 lg:p-8 rounded-3xl bg-white flex-col">
 						<div class=" h-52 w-full relative flex">
 							<img class=" absolute max-h-full max-w-full m-auto inset-0 object-cover rounded-3xl shadow-2xl" src={gh_Project.images} alt="Image_Project" loading="lazy" />
 						</div>
@@ -45,7 +45,7 @@
 							</div>
 							<a
 								href={gh_Project.html_url}
-								class="object absolute w-fit p-2 px-4 bottom-8 right-8 rounded-lg text-xl text-white bg-[#303030] transition-colors hover:bg-[#505050]"
+								class="object absolute w-fit p-2 px-4 bottom-8 right-8 rounded-lg text-base text-white bg-[#303030] transition-colors hover:bg-[#505050]"
 								target="_blank"
 								rel="noreferrer">more</a
 							>

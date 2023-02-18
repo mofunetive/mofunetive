@@ -82,10 +82,10 @@ class animation {
 					}
 				});
 
-				gsap.to(projectBoxContent[i], {
+				gsap.to(projectBoxContent, {
 					autoAlpha: 0,
 					onComplete: () => {
-						gsap.to(projectBoxContent[i], { height: 0 });
+						gsap.to(projectBoxContent, { height: 0, marginTop:0 });
 					}
 				});
 
@@ -123,11 +123,12 @@ class animation {
 							}
 						});
 
-						gsap.to(projectBoxContent[i], {
+						gsap.to(projectBoxContent, {
 							height: 'auto',
+							marginTop:"1rem",
 							duration: 1,
 							onComplete: () => {
-								gsap.to(projectBoxContent[i], { autoAlpha: 1 });
+								gsap.to(projectBoxContent, { autoAlpha: 1 });
 								gsap.to('.project_up', {
 									yPercent: 0,
 									autoAlpha: 1,

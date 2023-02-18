@@ -4,9 +4,21 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
-			// backgroundImage: {
-			// 	'githubProfile' : "url('')",
-			// }
+			'animation': {
+				'text':'text 4s linear infinite',
+			},
+			'keyframes': {
+				'text': {
+					'0%, 100%':{
+						'background-size':'200% 200%',
+						'background-position':'0%'
+					},
+					'50%': {
+						'background-size':'200% 200%',
+						'background-position':'100%'
+					}
+				},
+			}
 		}
 	},
 	plugins: [require('@tailwindcss/line-clamp')]

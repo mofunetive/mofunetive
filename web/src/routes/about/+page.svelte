@@ -16,14 +16,14 @@
 		</div>
 
 		<div class=" mt-4 text-[#505050]">
-			<h1 class="text-xl">About This Website</h1>
+			<h1 class="text-xl">About</h1>
 			<div class=" ml-4">
 				<p>This website make by {MetaData.name} to show repository from github organization about project now we developing</p>
 				<p>เว็บไซต์นี้สร้างโดย โมฟุเนะทีฟ เป็นเว็บไซต์ที่นำเสนอโปรเจคและผลงานของทีมเราจากกิตฮับ ที่เรากำลังพัฒนาอยู่</p>
 			</div>
 		</div>
 		<div class=" mt-4 text-[#505050]">
-			<h1 class="text-xl">Who build this website</h1>
+			<h1 class="text-xl">Who build this website?</h1>
 			<div class=" ml-4">
 				<p>Z0TEExt [Tee/ตี๋] &#60;front end/&#62;</p>
 				<ul class="w-fit list-disc list-inside">
