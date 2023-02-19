@@ -1,7 +1,24 @@
 <script lang="ts">
 	import MetaData from '@mofunetive/metadata';
+	import gsap from 'gsap';
 	import { version as versionMain } from 'packageMain';
-	// import { version as versionWeb } from 'packageWeb';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		gsap.to('.text_1', {
+			translateX: '-65%',
+			duration: 3,
+			repeat: -1,
+			ease: 'linear'
+		});
+
+		gsap.to('.text_3', {
+			translateX: 0,
+			duration: 10,
+			repeat: -1,
+			ease: 'linear'
+		});
+	});
 </script>
 
 <svelte:head>
@@ -11,8 +28,30 @@
 
 <section>
 	<div class=" max-w-full lg:max-w-6xl m-auto p-4 text-column">
-		<div class="banner h-80 w-full flex rounded-3xl bg-red-400">
-			<h1 class="text-5xl lg:text-9xl m-auto inset-0 text-white">Background</h1>
+		<div class="banner relative h-80 w-full rounded-3xl bg-red-400 space-y-3 overflow-hidden">
+			<div class="text_1 flex gap-12 text-8xl whitespace-nowrap font-bold">
+				<h1 class=" text-white">ABOUT</h1>
+				<h1 class=" text-white-outline">ABOUT</h1>
+				<h1 class=" text-white">ABOUT</h1>
+				<h1 class=" text-white-outline">ABOUT</h1>
+				<h1 class=" text-white">ABOUT</h1>
+			</div>
+			<div class="text_2 flex gap-24 text-8xl whitespace-nowrap font-bold">
+				<h1 class="text-white-outline -ml-64">โมฟุเนะทีฟ</h1>
+				<div class="inline-flex gap-4">
+					<h1 class="text-white">เกี่ยวกับ</h1>
+					<h1 class="text-white">โมฟุ</h1>
+					<h1 class="text-white-outline">เนะทีฟ</h1>
+				</div>
+
+				<h1 class="text-white-outline">เกี่ยวกับ</h1>
+			</div>
+			<div class="text_3 flex gap-12 text-8xl -translate-x-[97%] font-bold">
+				<h1 class="text-white-outline">MofuNetive</h1>
+				<h1 class="text-white">MofuNetive</h1>
+				<h1 class="text-white-outline">MofuNetive</h1>
+				<h1 class="text-white">MofuNetive</h1>
+			</div>
 		</div>
 
 		<div class=" mt-4 text-[#505050]">
@@ -47,3 +86,10 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	h1.text-white-outline {
+		color: transparent;
+		-webkit-text-stroke: 0.5px white;
+	}
+</style>

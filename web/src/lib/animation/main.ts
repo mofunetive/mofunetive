@@ -57,14 +57,6 @@ class animation {
 		const projectContent = document.querySelectorAll('.project_text_content');
 		const closeprojectBtn = document.querySelectorAll('.project_closeBtn');
 
-		gsap.to('.project_button', {
-			y: 10,
-			yoyo: true,
-			ease: 'liner',
-			repeat: -1,
-			duration: 0.5
-		});
-
 		projectBtn.forEach((btn, i) => {
 			btn.addEventListener('click', () => {
 				gsap.to(btn, {

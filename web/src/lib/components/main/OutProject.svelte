@@ -20,7 +20,7 @@
 				<div class="project_video h-48 lg:h-96 max-h-96 max-w-full m-auto rounded-3xl bg-gray-300" />
 				<!-- <img class="max-h-96 min-w-full object-cover rounded-3xl" src="https://media.tenor.com/L3Qg0iKD5YwAAAAC/doors-roblox-roblox-doors.gif" alt="video" /> -->
 				<div class="project_text h-fit relative p-4 lg:p-8 overflow-hidden">
-					<button class="project_button object w-fit absolute m-auto -mt-4 lg:-mt-6 left-0 right-0 rounded-full">
+					<button class="project_button object w-fit absolute m-auto animate-bounce lg:-mt-2 left-0 right-0 rounded-full">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-10 lg:h-10 pointer-events-none">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 						</svg>
