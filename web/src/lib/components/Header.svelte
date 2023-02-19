@@ -2,7 +2,7 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
 	import { onMount } from 'svelte';
-	
+
 	import { page } from '$app/stores';
 
 	onMount(() => {
