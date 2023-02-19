@@ -1,9 +1,10 @@
 /* eslint-disable unicorn/prefer-module */
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { Configuration } from "webpack";
-import TerserPlugin from "terser-webpack-plugin";
+
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import TerserPlugin from "terser-webpack-plugin";
+import { Configuration } from "webpack";
 
 const __filename = fileURLToPath(import.meta.url),
 	__dirname = path.dirname(__filename);

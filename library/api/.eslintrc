@@ -1,6 +1,5 @@
 {
 	"root": true,
-	"parser": "@typescript-eslint/parser",
 	"env": {
 		"es2022": true
 	},
@@ -8,20 +7,8 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["@typescript-eslint", "prettier", "unicorn", "typescript-sort-keys", "@graphql-eslint"],
-	"extends": [
-		"eslint:recommended",
-		"plugin:@typescript-eslint/eslint-recommended",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:unicorn/all",
-		"plugin:typescript-sort-keys/recommended",
-		"prettier"
-	],
-	"rules": {
-		"prettier/prettier": "warn",
-		"typescript-sort-keys/interface": "error",
-		"typescript-sort-keys/string-enum": "error"
-	},
+	"plugins": ["unicorn"],
+	"extends": ["./../../.eslintrc", "plugin:unicorn/all"],
 	"overrides": [
 		{
 			"files": ["*.graphql"],

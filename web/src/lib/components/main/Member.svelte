@@ -1,6 +1,6 @@
 <script lang="ts">
-	import MetaData from '@mofunetive/metadata';
 	import type { GetMembers } from '@mofunetive/api';
+	import MetaData from '@mofunetive/metadata';
 	export let mainData: GetMembers['response'];
 </script>
 

@@ -1,6 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-import type { PageServerLoad } from './$types';
 import GitHubAPI from '@mofunetive/api';
+
+import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async function () {
 	const GitHub = new GitHubAPI();

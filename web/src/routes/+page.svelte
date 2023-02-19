@@ -1,13 +1,14 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import type { PageData } from './$types';
-	import animation from '$animation/main';
 	import MetaData from '@mofunetive/metadata';
+	import { onMount } from 'svelte';
 
-	import Member from '$component/main/Member.svelte';
+	import animation from '$animation/main';
 	import JoinUs from '$component/main/JoinUs.svelte';
-	import OutProject from '$component/main/OutProject.svelte';
+	import Member from '$component/main/Member.svelte';
 	import OutCollection from '$component/main/OutCollection.svelte';
+	import OutProject from '$component/main/OutProject.svelte';
+
+	import type { PageData } from './$types';
 
 	export let data: PageData;
 

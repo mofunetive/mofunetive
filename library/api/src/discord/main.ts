@@ -1,49 +1,24 @@
-import { Axios, AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { Discord as Metadata } from "@mofunetive/metadata";
+import { Axios, AxiosRequestConfig } from "axios";
 import { Snowflake } from "discord-api-types/v10";
+
+import { config as baseconfig } from "../axios/config/base.js";
+import { interceptors } from "../axios/function/interceptors.js";
 import { Member } from "./types";
 
 export class DiscordAPI extends Axios {
 	constructor(token: string, config?: AxiosRequestConfig) {
 		super(
-			config ?? {
+			Object.assign({}, config, baseconfig, {
 				baseURL: "https://discord.com/api/v10/",
-				method: "GET",
-				responseEncoding: "utf8",
 				headers: {
-					"content-type": "application/json",
+					...baseconfig.headers,
 					Authorization: `Bot ${token}`,
 				},
-				responseType: "json",
-			},
+			}),
 		);
 
-		this.interceptors.response.use(
-			(response: AxiosResponse) => {
-				return JSON.parse(response?.data);
-			},
-			(error: AxiosError) => {
-				switch (error.status) {
-					case 400: {
-						console.error(error.response.data);
-						break;
-					}
-					case 401: {
-						console.error("unauthorised");
-						break;
-					}
-					case 404: {
-						console.error("/not-found");
-						break;
-					}
-					case 500: {
-						console.error("/server-error");
-						break;
-					}
-				}
-				return Promise.reject(error);
-			},
-		);
+		this.interceptors.response.use(interceptors as never);
 	}
 
 	public GetGuildMembers = (options?: { after?: Snowflake; limit: number }): Promise<Member[]> =>

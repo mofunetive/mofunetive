@@ -1,11 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 
-	import Loading from '$component/Loading.svelte';
 	import Cursor from '$component/Cursor.svelte';
-	import Header from '$component/Header.svelte';
 	// import Nightmode from '$component/Nightmode.svelte';
 	import Footer from '$component/Footer.svelte';
+	import Header from '$component/Header.svelte';
+	import Loading from '$component/Loading.svelte';
 </script>
 
 <div class="app flex flex-col min-h-screen bg-white dark:bg-[#303030] overflow-x-clip">

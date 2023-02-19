@@ -1,8 +1,9 @@
 <script lang="ts">
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
-	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+
+	import { page } from '$app/stores';
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
