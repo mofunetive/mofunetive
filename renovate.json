@@ -23,7 +23,7 @@
 		{
 			"matchPackagePatterns": ["*"],
 			"matchDepTypes": ["dependencies", "devDependencies"],
-			"groupName": "dependencies & devDependencies (major)",
+			"groupName": "dependencies & devDependencies",
 			"updateTypes": ["major"]
 		}
 	]
