@@ -28,4 +28,13 @@ export class DiscordAPI extends Axios {
 				after: options?.after,
 			},
 		});
+
+	public GetTeamMembers = (options?: { after?: Snowflake; limit: number }): Promise<Member[]> => {
+		return this.GetGuildMembers(options).then((data) => {
+			return data.filter((predicate) => {
+				if (!predicate.roles.includes("877250319275397130")) return;
+				return predicate;
+			});
+		});
+	};
 }

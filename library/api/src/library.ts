@@ -1,3 +1,4 @@
+export { DiscordAPI } from "./discord/main.js";
 export { GitHubAPI } from "./github/main.js";
 export { RESTfulAPI as default } from "./github/restful.js";
 export type { GetAll, GetImages, GetMembers, GetProject, GetRepository, Octokit } from "./github/types";
