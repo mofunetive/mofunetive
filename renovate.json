@@ -1,4 +1,30 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:base"]
+	"extends": ["config:base"],
+	"dependencyDashboard": true,
+	"automerge": false,
+	"packageRules": [
+		{
+			"matchPackageNames": ["typescript", "tslib"],
+			"groupName": "typescript dependencies"
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"matchDepTypes": ["dependencies"],
+			"groupName": "dependencies (non-major)",
+			"updateTypes": ["patch", "minor"]
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"matchDepTypes": ["devDependencies"],
+			"groupName": "devDependencies (non-major)",
+			"updateTypes": ["patch", "minor"]
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"matchDepTypes": ["dependencies", "devDependencies"],
+			"groupName": "dependencies & devDependencies",
+			"updateTypes": ["major"]
+		}
+	]
 }

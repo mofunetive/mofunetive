@@ -73,8 +73,9 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "pnpm lint-staged",
-			"pre-push": "pnpm run --silent lint"
+			"pre-commit": "pnpm run --silent pre-commit",
+			"pre-push": "pnpm run pre-push",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
 	"lint-staged": {
@@ -87,8 +88,10 @@
 		"library/**": [
 			"prettier --plugin-search-dir --write"
 		],
+		"web/**/*.{js,cjs,svelte,ts,d.ts}": [
+			"eslint -c './web/.eslintrc.cjs' --fix"
+		],
 		"web/**": [
-			"eslint -c './web/.eslintrc.cjs' --fix",
 			"prettier --plugin-search-dir --config './web/.prettierrc' --write"
 		]
 	},
