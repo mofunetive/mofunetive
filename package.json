@@ -88,8 +88,10 @@
 		"library/**": [
 			"prettier --plugin-search-dir --write"
 		],
+		"web/**/*.{js,cjs,svelte,ts,d.ts}": [
+			"eslint -c './web/.eslintrc.cjs' --fix"
+		],
 		"web/**": [
-			"eslint -c './web/.eslintrc.cjs' --fix",
 			"prettier --plugin-search-dir --config './web/.prettierrc' --write"
 		]
 	},
