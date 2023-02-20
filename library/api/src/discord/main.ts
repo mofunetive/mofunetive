@@ -4,9 +4,11 @@ import { Snowflake } from "discord-api-types/v10";
 
 import { config as baseconfig } from "../axios/config/base.js";
 import { interceptors } from "../axios/function/interceptors.js";
-import { Member } from "./types";
+import { GetTeamMembers, Member, Roles } from "./types";
 
 export class DiscordAPI extends Axios {
+	private teamMembers: GetTeamMembers = {};
+
 	constructor(token: string, config?: AxiosRequestConfig) {
 		super(
 			Object.assign({}, config, baseconfig, {
@@ -29,12 +31,36 @@ export class DiscordAPI extends Axios {
 			},
 		});
 
-	public GetTeamMembers = (options?: { after?: Snowflake; limit: number }): Promise<Member[]> => {
-		return this.GetGuildMembers(options).then((data) => {
-			return data.filter((predicate) => {
-				if (!predicate.roles.includes("877250319275397130")) return;
-				return predicate;
-			});
-		});
+	public GetTeamMembers = async (options?: { after?: Snowflake; limit: number }): Promise<GetTeamMembers> => {
+		const role = await this.GetGuildRole({ bot: false, hoist: true, mentionable: true }),
+			user = await this.GetGuildMembers(options);
+
+		for (const iterator of role) {
+			this.teamMembers[iterator.name] = {
+				id: iterator.id,
+				members: user.filter((predicate) => predicate.roles.includes(iterator.id)),
+			};
+		}
+
+		return this.teamMembers;
 	};
+
+	public GetGuildRole = (options?: { bot?: boolean; hoist?: boolean; mentionable?: boolean }): Promise<Roles[]> =>
+		this.get(`guilds/${Metadata.server_id}/roles`).then((data: Roles[] | any) => {
+			return data
+				.filter((role: Roles) => {
+					if (!options?.bot && role.tags?.bot_id) return;
+					if (options?.hoist && !role.hoist) return;
+					if (options?.mentionable && !role.mentionable) return;
+					return role;
+				})
+				.sort((a, b) => {
+					if (a.position < b.position) {
+						return 1;
+					} else if (a.position > b.position) {
+						return -1;
+					}
+					return 0;
+				});
+		});
 }

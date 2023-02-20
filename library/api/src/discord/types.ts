@@ -23,3 +23,30 @@ export type User = {
 	public_flags: number;
 	username: string;
 };
+
+export type Roles = {
+	color: number;
+	description: null;
+	flags: number;
+	hoist: boolean;
+	icon: null;
+	id: string;
+	managed: boolean;
+	mentionable: boolean;
+	name: string;
+	permissions: string;
+	position: number;
+	tags?: Tags;
+	unicode_emoji: null;
+};
+
+export type Tags = {
+	bot_id: string;
+};
+
+export interface GetTeamMembers {
+	[property: string]: {
+		id: string;
+		members: Member[];
+	};
+}
