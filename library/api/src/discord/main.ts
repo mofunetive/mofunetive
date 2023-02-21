@@ -7,7 +7,7 @@ import { interceptors } from "../axios/function/interceptors.js";
 import { GetTeamMembers, Member, Roles } from "./types";
 
 export class DiscordAPI extends Axios {
-	private teamMembers: GetTeamMembers = {};
+	private teamMembers: GetTeamMembers[] = [];
 
 	constructor(token: string, config?: AxiosRequestConfig) {
 		super(
@@ -31,15 +31,15 @@ export class DiscordAPI extends Axios {
 			},
 		});
 
-	public GetTeamMembers = async (options?: { after?: Snowflake; limit: number }): Promise<GetTeamMembers> => {
+	public GetTeamMembers = async (options?: { after?: Snowflake; limit: number }): Promise<GetTeamMembers[]> => {
 		const role = await this.GetGuildRole({ bot: false, hoist: true, mentionable: true }),
 			user = await this.GetGuildMembers(options);
 
 		for (const iterator of role) {
-			this.teamMembers[iterator.name] = {
-				id: iterator.id,
+			this.teamMembers.push({
+				name: iterator.name,
 				members: user.filter((predicate) => predicate.roles.includes(iterator.id)),
-			};
+			});
 		}
 
 		return this.teamMembers;

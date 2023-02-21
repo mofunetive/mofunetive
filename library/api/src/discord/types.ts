@@ -45,8 +45,6 @@ export type Tags = {
 };
 
 export interface GetTeamMembers {
-	[property: string]: {
-		id: string;
-		members: Member[];
-	};
+	members: Member[];
+	name: string;
 }
