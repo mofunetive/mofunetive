@@ -28,7 +28,7 @@
 
 <section>
 	<div class=" max-w-full lg:max-w-6xl m-auto p-4 text-column">
-		<div class="banner relative h-80 w-full rounded-3xl bg-red-400 space-y-3 overflow-hidden">
+		<div class="banner relative h-80 w-full rounded-3xl bg-[#303030] space-y-3 overflow-hidden">
 			<div class="text_1 flex gap-12 text-8xl whitespace-nowrap font-bold">
 				<h1 class=" text-white">ABOUT</h1>
 				<h1 class=" text-white-outline">ABOUT</h1>

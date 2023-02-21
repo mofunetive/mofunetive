@@ -6,9 +6,8 @@ class animation {
 		gsap.registerPlugin(ScrollTrigger, CustomEase, Flip, Elastic);
 		gsap.config({ nullTargetWarn: false });
 
-		gsap.set('.profile_card', { xPercent: -200 });
 		gsap.to('.profile_card', {
-			xPercent: 0,
+			translateX: 0,
 			opacity: 1,
 			duration: 1,
 			onComplete: () => {
@@ -30,9 +29,8 @@ class animation {
 			}
 		});
 
-		gsap.set('.welcome_text', { yPercent: -100 });
 		gsap.to('.welcome_text', {
-			yPercent: 0,
+			translateY: 0,
 			duration: 1
 		});
 

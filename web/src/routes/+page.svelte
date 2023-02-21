@@ -30,7 +30,7 @@
 <section class="overflow-x-auto">
 	<Member mainData={gitMembers} />
 
-	<OutProject mainData={gitRepository} />
+	<!-- <OutProject mainData={gitRepository} /> -->
 
 	<OutCollection mainData={gitProject} />
 

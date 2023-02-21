@@ -5,11 +5,10 @@ import { DiscordAPI } from '@mofunetive/api';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async function () {
-	const Discord = new DiscordAPI(process.env.DISCORD_TOKEN);
+	const Discord = new DiscordAPI('MTA3MTI0NzI5MTI5NTQ2OTYwOA.GUm_mS.6XlQcWo4Uk5g0bH4xxdyTdWzlLesdUesH3Ptkk');
 	const data = await Discord.GetTeamMembers();
 
 	return {
-		devTeam: data.filter((data) => data.roles.includes('877250319275397130')),
-		staffTeam: data.filter((data) => data.roles.includes('907903785379184661'))
+		dataTeam: data
 	};
 };
