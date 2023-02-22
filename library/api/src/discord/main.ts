@@ -9,15 +9,25 @@ import { GetTeamMembers, Member, Roles } from "./types";
 export class DiscordAPI extends Axios {
 	private teamMembers: GetTeamMembers[] = [];
 
-	constructor(token: string, config?: AxiosRequestConfig) {
+	constructor(token?: string, config?: AxiosRequestConfig) {
 		super(
 			Object.assign({}, config, baseconfig, {
 				baseURL: "https://discord.com/api/v10/",
 				headers: {
 					...baseconfig.headers,
-					Authorization: `Bot ${token}`,
+					Authorization: `Bot ${token ?? process.env.DISCORD_TOKEN}`,
 				},
 			}),
+		);
+
+		this.interceptors.request.use(
+			function (config) {
+				if (!(token ?? process.env.DISCORD_TOKEN)) return Promise.reject("error").catch((error) => error);
+				return config;
+			},
+			function (error) {
+				return Promise.reject(error);
+			},
 		);
 
 		this.interceptors.response.use(interceptors as never);
@@ -36,10 +46,18 @@ export class DiscordAPI extends Axios {
 			user = await this.GetGuildMembers(options);
 
 		for (const iterator of role) {
-			this.teamMembers.push({
-				name: iterator.name,
-				members: user.filter((predicate) => predicate.roles.includes(iterator.id)),
+			const memberslist = user.filter((predicate) => {
+				if (!predicate.roles.includes(iterator.id)) return;
+				if (predicate.roles.includes("1077617181602357319")) return;
+				return predicate;
 			});
+
+			if (memberslist.length > 0) {
+				this.teamMembers.push({
+					name: iterator.name,
+					members: memberslist,
+				});
+			}
 		}
 
 		return this.teamMembers;
