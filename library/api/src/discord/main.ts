@@ -42,14 +42,26 @@ export class DiscordAPI extends Axios {
 		});
 
 	public GetTeamMembers = async (options?: { after?: Snowflake; limit: number }): Promise<GetTeamMembers[]> => {
-		const role = await this.GetGuildRole({ bot: false, hoist: true, mentionable: true }),
-			user = await this.GetGuildMembers(options);
+		const roles = await this.GetGuildRole({ bot: false, hoist: false, mentionable: false }),
+			users = await this.GetGuildMembers(options);
 
-		for (const iterator of role) {
-			const memberslist = user.filter((predicate) => {
-				if (!predicate.roles.includes(iterator.id)) return;
-				if (predicate.roles.includes("1077617181602357319")) return;
-				return predicate;
+		for (const iterator of roles.filter((role) => {
+			if (role.tags?.bot_id) return;
+			if (!role.mentionable) return;
+			if (!role.hoist) return;
+			return role;
+		})) {
+			const memberslist = users.filter((user) => {
+				if (!user.roles.includes(iterator.id)) return;
+				if (user.roles.includes("1077617181602357319")) return; // Ignore Canary Team
+				if (user.roles[user.roles.indexOf(iterator.id)]) user.roles.splice(user.roles.indexOf(iterator.id), 1);
+				if (user.roles.length > 0) {
+					for (const id of user.roles) {
+						user.roles[user.roles.indexOf(id)] = roles.find((role) => role.id === id).name;
+					}
+				}
+
+				return user;
 			});
 
 			if (memberslist.length > 0) {
@@ -64,8 +76,8 @@ export class DiscordAPI extends Axios {
 	};
 
 	public GetGuildRole = (options?: { bot?: boolean; hoist?: boolean; mentionable?: boolean }): Promise<Roles[]> =>
-		this.get(`guilds/${Metadata.server_id}/roles`).then((data: Roles[] | any) => {
-			return data
+		this.get(`guilds/${Metadata.server_id}/roles`).then((roles: Roles[] | any) => {
+			return roles
 				.filter((role: Roles) => {
 					if (!options?.bot && role.tags?.bot_id) return;
 					if (options?.hoist && !role.hoist) return;
