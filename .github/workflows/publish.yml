@@ -87,7 +87,7 @@ jobs:
               with:
                   run_install: |
                       - recursive: true
-                        args: [--frozen-lockfile, --strict-peer-dependencies, --ignore-scripts]]
+                        args: [--frozen-lockfile, --strict-peer-dependencies, --ignore-scripts]
                       - args: [--global, '@jsdevtools/version-bump-prompt', 'conventional-changelog-cli']
 
             - name: Setup Node
