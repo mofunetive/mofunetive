@@ -23,7 +23,7 @@ importers:
       eslint-plugin-unicorn: 45.0.2
       git-format-staged: 3.0.0
       husky: 8.0.0
-      inquirer: ^8
+      inquirer: '8'
       is-ci: 3.0.1
       lint-staged: 13.1.0
       prettier: 2.8.3
@@ -78,7 +78,6 @@ importers:
       cross-env: 7.0.3
       discord-api-types: 0.37.33
       graphql: 16.6.0
-      prettier: 2.8.3
       terser-webpack-plugin: 5.3.6
       ts-loader: 9.4.2
       ts-node: 10.9.1
@@ -104,7 +103,6 @@ importers:
       clean-webpack-plugin: 4.0.0_webpack@5.75.0
       cross-env: 7.0.3
       graphql: 16.6.0
-      prettier: 2.8.3
       terser-webpack-plugin: 5.3.6_webpack@5.75.0
       ts-loader: 9.4.2_hhrrucqyg4eysmfpujvov2ym5u
       ts-node: 10.9.1_4bewfcp2iebiwuold25d6rgcsy
@@ -136,9 +134,9 @@ importers:
       '@types/cookie': 0.5.1
       '@types/node': 18.13.0
       autoprefixer: 10.4.13
-      before-after-hook: ^2.2.3
+      before-after-hook: 2.2.3
       eslint-plugin-svelte3: 4.0.0
-      gsap: ^3.11.4
+      gsap: 3.11.4
       once: 1.4.0
       postcss: 8.4.21
       prettier-plugin-svelte: 2.9.0

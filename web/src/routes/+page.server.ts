@@ -1,7 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 import GitHubAPI from '@mofunetive/api';
 
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad } from '../../.svelte-kit/types/src/routes/$types';
 
 export const load: PageServerLoad = async function () {
 	const GitHub = new GitHubAPI();

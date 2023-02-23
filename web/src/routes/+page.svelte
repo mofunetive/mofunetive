@@ -6,8 +6,8 @@
 	import JoinUs from '$component/main/JoinUs.svelte';
 	import Member from '$component/main/Member.svelte';
 	import OutCollection from '$component/main/OutCollection.svelte';
-	import OutProject from '$component/main/OutProject.svelte';
 
+	// import OutProject from '$component/main/OutProject.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

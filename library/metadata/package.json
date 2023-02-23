@@ -23,7 +23,9 @@
 		"ci:bump": "bump",
 		"ci:delete_scripts": "pnpm pkg delete scripts",
 		"clean": "rimraf dist lib lib-esm",
-		"postinstall": "pnpm build-esm"
+		"postinstall": "pnpm build-esm",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
 	},
 	"typings": "lib-esm/enum.d.ts",
 	"devDependencies": {

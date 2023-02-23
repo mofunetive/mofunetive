@@ -1,8 +1,8 @@
 <script lang="ts">
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
-	import { is_empty } from 'svelte/internal';
 
+	// import { is_empty } from 'svelte/internal';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -10,15 +10,13 @@
 	$: ({ dataTeam } = data);
 
 	onMount(() => {
-		//gsap.set('.member', { width: '35%', duration: 1 });
+		gsap.set('.member', { width: '35%', duration: 1 });
 
-		// gsap.to('.member', {
-		// 	width: '80%',
-		// 	duration: 1,
-		// 	stagger: 0.2
-		// });
-
-		console.log(dataTeam);
+		gsap.to('.member', {
+			width: '80%',
+			duration: 1,
+			stagger: 0.2
+		});
 	});
 </script>
 

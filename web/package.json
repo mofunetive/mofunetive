@@ -21,8 +21,8 @@
 		"@mofunetive/api": "workspace:*",
 		"@mofunetive/metadata": "workspace:*",
 		"@tailwindcss/line-clamp": "0.4.2",
-		"before-after-hook": "^2.2.3",
-		"gsap": "^3.11.4",
+		"before-after-hook": "2.2.3",
+		"gsap": "3.11.4",
 		"once": "1.4.0",
 		"whatwg-url": "5.0.0"
 	},

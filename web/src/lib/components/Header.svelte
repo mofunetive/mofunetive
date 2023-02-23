@@ -8,7 +8,7 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
-		// NavBar
+		// Navigation Bar
 		gsap.to('.navbar', {
 			width: 0,
 			minWidth: 'fit-content',

@@ -42,7 +42,7 @@ export class DiscordAPI extends Axios {
 		});
 
 	public GetTeamMembers = async (options?: { after?: Snowflake; limit: number }): Promise<GetTeamMembers[]> => {
-		const roles = await this.GetGuildRole({ bot: false, hoist: false, mentionable: false }),
+		const roles = await this.GetGuildRoles({ bot: false, hoist: false, mentionable: false }),
 			users = await this.GetGuildMembers(options);
 
 		for (const iterator of roles.filter((role) => {
@@ -75,7 +75,8 @@ export class DiscordAPI extends Axios {
 		return this.teamMembers;
 	};
 
-	public GetGuildRole = (options?: { bot?: boolean; hoist?: boolean; mentionable?: boolean }): Promise<Roles[]> =>
+	public GetGuildRoles = (options?: { bot?: boolean; hoist?: boolean; mentionable?: boolean }): Promise<Roles[]> =>
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		this.get(`guilds/${Metadata.server_id}/roles`).then((roles: Roles[] | any) => {
 			return roles
 				.filter((role: Roles) => {
