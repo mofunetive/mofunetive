@@ -2,7 +2,7 @@
 	import MetaData from '@mofunetive/metadata';
 	import { onMount } from 'svelte';
 
-	import animation from '$animation/homepage';
+	import animation from '$animation/main';
 	import JoinUs from '$component/main/JoinUs.svelte';
 	import Member from '$component/main/Member.svelte';
 	import OutCollection from '$component/main/OutCollection.svelte';
@@ -30,7 +30,7 @@
 <section class="overflow-x-auto">
 	<Member mainData={gitMembers} />
 
-	<OutProject mainData={gitRepository} />
+	<!-- <OutProject mainData={gitRepository} /> -->
 
 	<OutCollection mainData={gitProject} />
 

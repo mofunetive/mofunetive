@@ -11,7 +11,7 @@
 	</video>
 
 	<div class="background w-full flex flex-row bg-black bg-opacity-50 bg-cover rounded-3xl z-10">
-		<div class="profile_card w-full lg:w-1/2 p-4 py-12 lg:p-14 2xl:mb-24">
+		<div class="profile_card w-full lg:w-1/2 p-4 py-12 lg:p-14 2xl:mb-24 -translate-x-[100%]">
 			<h1 class="object w-fit text-3xl font-bold text-white">Hello World!</h1>
 			{#await mainData}
 				<div class=" relative mt-12 xl:mt-14 2xl:mt-24">
@@ -43,7 +43,7 @@
 							/>
 						</div>
 						<div class=" h-36 w-full 2xl:w-[80%] mt-4 bg-white rounded-3xl ">
-							<div class="content h-full w-full relative p-4 pr-2 pb-12 ">
+							<div class="content h-full w-full relative p-4 pr-2 pb-12 text-[#505050]">
 								<h1 class=" text-xl font-semibold">{Members[Members.length - 1].login}</h1>
 								<p class=" line-clamp-2">{Members[Members.length - 1].bio}</p>
 								<div class="contact absolute right-4 bottom-4 flex ">
@@ -60,7 +60,7 @@
 								<img class=" h-full w-full object-cover rounded-full border-4 border-white text-center " src={userData.avatar_url} alt="gh_profile_image" loading="lazy" />
 							</div>
 							<div class=" h-36 w-full 2xl:w-[80%] mt-4 bg-white rounded-3xl">
-								<div class="content h-full relative p-4 pr-2 pb-12">
+								<div class="content h-full relative p-4 pr-2 pb-12 text-[#505050]">
 									<h1 class=" text-xl font-semibold">{userData.login}</h1>
 									<p class=" line-clamp-2">{userData.bio}</p>
 									<div class="contact absolute right-4 bottom-4 flex ">
@@ -77,7 +77,7 @@
 			{/await}
 		</div>
 
-		<div class="welcome_text w-1/2 hidden lg:flex flex-col justify-center  text-white text-6xl text-center">
+		<div class="welcome_text w-1/2 hidden lg:flex flex-col justify-center  text-white text-6xl text-center -translate-y-[100%]">
 			<h1 class="object w-fit m-auto mb-0">We Are</h1>
 			<h1 class="object w-fit m-auto mt-0">{MetaData.title}</h1>
 		</div>

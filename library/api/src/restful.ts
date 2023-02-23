@@ -1,8 +1,8 @@
 import { Axios, AxiosRequestConfig } from "axios";
 
-import { config as baseconfig } from "../axios/config/base.js";
-import { interceptors } from "../axios/function/interceptors.js";
-import type { GetAll, GetProject, Octokit as OctokitType } from "./types";
+import { config as baseconfig } from "./axios/config/base.js";
+import { interceptors } from "./axios/function/interceptors.js";
+import type { GetAll, GetProject, Octokit as OctokitType } from "./github/types.js";
 
 export class RESTfulAPI extends Axios {
 	constructor(config?: AxiosRequestConfig) {

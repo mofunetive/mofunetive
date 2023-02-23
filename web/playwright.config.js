@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
+	reporter: [['html', { outputFolder: 'my-report' }]],
 	webServer: {
 		command: 'pnpm run build && pnpm run preview',
 		port: 4399

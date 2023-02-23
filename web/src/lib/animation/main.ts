@@ -6,9 +6,8 @@ class animation {
 		gsap.registerPlugin(ScrollTrigger, CustomEase, Flip, Elastic);
 		gsap.config({ nullTargetWarn: false });
 
-		gsap.set('.profile_card', { xPercent: -200 });
 		gsap.to('.profile_card', {
-			xPercent: 0,
+			translateX: 0,
 			opacity: 1,
 			duration: 1,
 			onComplete: () => {
@@ -30,9 +29,8 @@ class animation {
 			}
 		});
 
-		gsap.set('.welcome_text', { yPercent: -100 });
 		gsap.to('.welcome_text', {
-			yPercent: 0,
+			translateY: 0,
 			duration: 1
 		});
 
@@ -57,14 +55,6 @@ class animation {
 		const projectContent = document.querySelectorAll('.project_text_content');
 		const closeprojectBtn = document.querySelectorAll('.project_closeBtn');
 
-		gsap.to('.project_button', {
-			y: 10,
-			yoyo: true,
-			ease: 'liner',
-			repeat: -1,
-			duration: 0.5
-		});
-
 		projectBtn.forEach((btn, i) => {
 			btn.addEventListener('click', () => {
 				gsap.to(btn, {
@@ -82,10 +72,10 @@ class animation {
 					}
 				});
 
-				gsap.to(projectBoxContent[i], {
+				gsap.to(projectBoxContent, {
 					autoAlpha: 0,
 					onComplete: () => {
-						gsap.to(projectBoxContent[i], { height: 0 });
+						gsap.to(projectBoxContent, { height: 0, marginTop: 0 });
 					}
 				});
 
@@ -123,11 +113,12 @@ class animation {
 							}
 						});
 
-						gsap.to(projectBoxContent[i], {
+						gsap.to(projectBoxContent, {
 							height: 'auto',
+							marginTop: '1rem',
 							duration: 1,
 							onComplete: () => {
-								gsap.to(projectBoxContent[i], { autoAlpha: 1 });
+								gsap.to(projectBoxContent, { autoAlpha: 1 });
 								gsap.to('.project_up', {
 									yPercent: 0,
 									autoAlpha: 1,
