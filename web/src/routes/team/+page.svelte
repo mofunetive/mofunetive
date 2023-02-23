@@ -1,6 +1,7 @@
 <script lang="ts">
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
+	import { is_empty } from 'svelte/internal';
 
 	import type { PageData } from './$types';
 
@@ -9,15 +10,15 @@
 	$: ({ dataTeam } = data);
 
 	onMount(() => {
-		gsap.set('.member', { width: '35%', duration: 1 });
+		//gsap.set('.member', { width: '35%', duration: 1 });
 
-		gsap.to('.member', {
-			width: '80%',
-			duration: 1,
-			stagger: 0.2
-		});
+		// gsap.to('.member', {
+		// 	width: '80%',
+		// 	duration: 1,
+		// 	stagger: 0.2
+		// });
 
-		console.log(dataTeam[2].members.length);
+		console.log(dataTeam);
 	});
 </script>
 
@@ -60,14 +61,16 @@
 										loading="lazy"
 									/>
 									<div class="absolute h-28 w-full m-auto inset-y-0 p-6 bg-[#303030] rounded-full">
-										<div class="max-w-[50%] text-white text-center">
-											<h1 class="text-base lg:text-xl  line-clamp-1">{finalData.user.username}</h1>
-											<div class="inline-flex flex-col-reverse lg:flex-row ">
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="my-auto mr-2 w-6 h-6">
-													<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-												</svg>
-												<h1 class="text-base xl:text-xl m-auto">{finalData.roles.map((value) => value)}</h1>
-											</div>
+										<div class="max-w-[50%] flex flex-col h-full text-white text-center">
+											<h1 class=" text-base lg:text-xl line-clamp-1 m-auto">{finalData.user.username}</h1>
+											{#if finalData.roles[0] != null}
+												<div class="inline-flex flex-row text-center m-auto">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto mr-2 w-6 h-6">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+													</svg>
+													<h1 class="text-sm xl:text-xl ">{finalData.roles[0] ?? finalData.user.username}</h1>
+												</div>
+											{/if}
 										</div>
 									</div>
 								</div>
