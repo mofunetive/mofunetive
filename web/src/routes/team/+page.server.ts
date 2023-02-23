@@ -1,14 +1,13 @@
-import { DiscordAPI } from '@mofunetive/api';
+import 'dotenv/config';
 
-import { DISCORD_TOKEN } from '$env/static/private';
+import { DiscordAPI } from '@mofunetive/api';
 
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async function () {
-	const Discord = new DiscordAPI(DISCORD_TOKEN);
-	const data = await Discord.GetTeamMembers();
+	const Discord = new DiscordAPI();
 
 	return {
-		dataTeam: data
+		dataTeam: await Discord.GetTeamMembers()
 	};
 };
