@@ -98,7 +98,7 @@
 			"prettier --plugin-search-dir --config './web/.prettierrc' --write --ignore-unknown"
 		]
 	},
-	"packageManager": "pnpm@7.25.0",
+	"packageManager": "pnpm@7.27.1",
 	"pnpm": {
 		"updateConfig": {
 			"ignoreDependencies": [
