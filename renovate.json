@@ -3,6 +3,7 @@
 	"extends": ["config:base"],
 	"dependencyDashboard": true,
 	"automerge": false,
+	"ignoreDeps": ["before-after-hook"],
 	"packageRules": [
 		{
 			"matchPackageNames": ["typescript", "tslib"],

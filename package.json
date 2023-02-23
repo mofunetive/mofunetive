@@ -42,34 +42,34 @@
 		"web/**"
 	],
 	"devDependencies": {
-		"@commitlint/cli": "^17.4.2",
-		"@commitlint/config-conventional": "^17.4.2",
-		"@commitlint/cz-commitlint": "^17.4.2",
-		"@jsdevtools/version-bump-prompt": "^6.1.0",
-		"@typescript-eslint/eslint-plugin": "^5.51.0",
-		"@typescript-eslint/parser": "^5.51.0",
-		"commitizen": "^4.3.0",
-		"conventional-changelog-cli": "^2.2.2",
-		"dotenv": "^16.0.3",
-		"dotenv-cli": "^7.0.0",
-		"eslint": "^8.33.0",
-		"eslint-config-prettier": "^8.6.0",
-		"eslint-plugin-graphql": "^4.0.0",
-		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-simple-import-sort": "^10.0.0",
-		"eslint-plugin-typescript-sort-keys": "^2.1.0",
-		"eslint-plugin-unicorn": "^45.0.2",
-		"git-format-staged": "^3.0.0",
-		"husky": "^8.0.0",
-		"inquirer": "8",
-		"is-ci": "^3.0.1",
-		"lint-staged": "^13.1.0",
-		"prettier": "^2.8.3",
-		"prettier-package-json": "^2.8.0",
-		"prettier-plugin-sh": "^0.12.8",
-		"pretty-quick": "^3.1.3",
+		"@commitlint/cli": "17.4.2",
+		"@commitlint/config-conventional": "17.4.2",
+		"@commitlint/cz-commitlint": "17.4.2",
+		"@jsdevtools/version-bump-prompt": "6.1.0",
+		"@typescript-eslint/eslint-plugin": "5.51.0",
+		"@typescript-eslint/parser": "5.51.0",
+		"commitizen": "4.3.0",
+		"conventional-changelog-cli": "2.2.2",
+		"dotenv": "16.0.3",
+		"dotenv-cli": "7.0.0",
+		"eslint": "8.33.0",
+		"eslint-config-prettier": "8.6.0",
+		"eslint-plugin-graphql": "4.0.0",
+		"eslint-plugin-prettier": "4.2.1",
+		"eslint-plugin-simple-import-sort": "10.0.0",
+		"eslint-plugin-typescript-sort-keys": "2.1.0",
+		"eslint-plugin-unicorn": "45.0.2",
+		"git-format-staged": "3.0.0",
+		"husky": "8.0.0",
+		"inquirer": "^8",
+		"is-ci": "3.0.1",
+		"lint-staged": "13.1.0",
+		"prettier": "2.8.3",
+		"prettier-package-json": "2.8.0",
+		"prettier-plugin-sh": "0.12.8",
+		"pretty-quick": "3.1.3",
 		"rimraf": "3.0.2",
-		"turbo": "^1.7.2"
+		"turbo": "1.7.2"
 	},
 	"engines": {
 		"node": ">=16.x"
@@ -94,8 +94,8 @@
 		"web/**/*.{js,cjs,svelte,ts,d.ts}": [
 			"eslint -c './web/.eslintrc.cjs' --fix"
 		],
-		"web/**": [
-			"prettier --plugin-search-dir --config './web/.prettierrc' --write --ignore-unknown"
+		"*": [
+			"pnpm run prettier --ignore-unknown"
 		]
 	},
 	"packageManager": "pnpm@7.27.1",
