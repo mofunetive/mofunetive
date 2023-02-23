@@ -89,13 +89,13 @@
 			"prettier-package-json --write --use-tabs false"
 		],
 		"library/**": [
-			"prettier --plugin-search-dir --write"
+			"prettier --plugin-search-dir --write --ignore-unknown"
 		],
 		"web/**/*.{js,cjs,svelte,ts,d.ts}": [
 			"eslint -c './web/.eslintrc.cjs' --fix"
 		],
 		"web/**": [
-			"prettier --plugin-search-dir --config './web/.prettierrc' --write"
+			"prettier --plugin-search-dir --config './web/.prettierrc' --write --ignore-unknown"
 		]
 	},
 	"packageManager": "pnpm@7.25.0",
