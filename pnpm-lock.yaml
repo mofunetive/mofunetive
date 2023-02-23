@@ -65,7 +65,7 @@ importers:
         specifiers:
             "@babel/core": 7.20.12
             "@graphql-eslint/eslint-plugin": 3.15.0
-            "@mofunetive/metadata": 1.0.0
+            "@mofunetive/metadata": 1.1.0
             "@octokit/graphql-schema": 13.2.0
             "@octokit/openapi-types": 16.0.0
             "@octokit/rest": 19.0.7
