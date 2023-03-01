@@ -82,7 +82,7 @@
 		</div>
 		<div class="mt-4 text-[#505050]">
 			<!-- <p>Web Ver. {versionWeb}</p> -->
-			<p>Version. {versionMain}</p>
+			<a class="object" target="_blank" rel="noreferrer" href="{MetaData.url}/{MetaData.name}/releases/tag/v{versionMain}">Version. {versionMain}</a>
 		</div>
 	</div>
 </section>

@@ -60,7 +60,9 @@
 									/>
 									<div class="absolute h-28 w-full m-auto inset-y-0 p-6 bg-[#303030] rounded-full">
 										<div class="max-w-[50%] flex flex-col h-full text-white text-center">
-											<h1 class=" text-base lg:text-xl line-clamp-1 m-auto">{finalData.user.username}</h1>
+											<h1 class="text-base lg:text-xl line-clamp-1 m-auto">
+												<a class="object" target="_blank" rel="noreferrer" href="https://discord.com/users/{finalData.user.id}">{finalData.user.username}</a>
+											</h1>
 											{#if finalData.roles[0] != null}
 												<div class="inline-flex flex-row text-center m-auto">
 													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto mr-2 w-6 h-6">
