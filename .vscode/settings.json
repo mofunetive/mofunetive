@@ -13,6 +13,9 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
