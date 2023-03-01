@@ -73,6 +73,8 @@ jobs:
         name: Bump Version
         needs: [test]
         runs-on: ubuntu-latest
+        outputs:
+            outversion: ${{ steps.package.outputs.version }}
         if: |
             always() && github.event.inputs.nobumpversion == 'false' &&
             !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
@@ -128,6 +130,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
+              with:
+                  ref: "refs/tags/${{ needs.bumpversion.outputs.outversion || 'main' }}"
 
             - name: Setup PNPM
               uses: pnpm/action-setup@v2
@@ -177,6 +181,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
+              with:
+                  ref: "refs/tags/${{ needs.bumpversion.outputs.outversion || 'main' }}"
 
             - name: Deploy to Vercel
               uses: amondnet/vercel-action@v25
