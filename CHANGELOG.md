@@ -1,3 +1,13 @@
+## [1.1.1](https://github.com/mofunetive/mofunetive/compare/v1.1.0...v1.1.1) (2023-03-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies (non-major) ([#11](https://github.com/mofunetive/mofunetive/issues/11)) ([bd2b587](https://github.com/mofunetive/mofunetive/commit/bd2b58705493a268efef667bb12ff500a696c213))
+* **mouse:** animation on reload ([d1ba861](https://github.com/mofunetive/mofunetive/commit/d1ba861663e535910010d2e4e44c9fd9f0f9078e))
+
+
+
 # [1.1.0](https://github.com/mofunetive/mofunetive/compare/v1.0.1...v1.1.0) (2023-02-23)
 
 
