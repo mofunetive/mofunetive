@@ -19,7 +19,7 @@
 		"fix": "pnpm --filter=* lint:fix",
 		"format": "prettier --write .",
 		"preinstall": "npx only-allow pnpm",
-		"lint": "turbo run lint",
+		"lint": "pnpm --filter=* lint",
 		"prepack": "pnpm run clean",
 		"pnpm-update:check": "pnpm outdated --recursive --long",
 		"pnpm-update:choose": "pnpm pnpm-update:force --workspace --interactive",
