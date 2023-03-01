@@ -1,6 +1,6 @@
-<button class="switch-dark hidden lg:block fixed w-fit left-16 bottom-4 px-6 py-1 bg-[#303030] rounded-3xl text-white text-xl text-center">
-	<div class=" block visible">
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+<button class="switch-dark fixed left-16 bottom-4 hidden w-fit rounded-3xl bg-[#303030] px-6 py-1 text-center text-xl text-white lg:block">
+	<div class=" visible block">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"
@@ -8,8 +8,8 @@
 			/>
 		</svg>
 	</div>
-	<div class=" hidden invisible">
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+	<div class=" invisible hidden">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"

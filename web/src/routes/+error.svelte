@@ -24,7 +24,7 @@
 </script>
 
 <section>
-	<div class="error absolute h-fit w-fit top-1/2 left-1/2 p-4 -translate-x-1/2 -translate-y-1/2 text-white text-xl bg-[#303030] rounded-xl">
+	<div class="error absolute top-1/2 left-1/2 h-fit w-fit -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[#303030] p-4 text-xl text-white">
 		<h1>{$page.status} {$page.error?.message}</h1>
 		<p>{ranWord[Math.floor(Math.random() * ranWord.length)]}</p>
 	</div>

@@ -27,16 +27,16 @@
 </svelte:head>
 
 <section>
-	<div class=" max-w-full lg:max-w-6xl m-auto p-4 text-column">
-		<div class="banner relative h-80 w-full rounded-3xl bg-[#303030] space-y-3 overflow-hidden">
-			<div class="text_1 flex gap-12 text-8xl whitespace-nowrap font-bold">
+	<div class=" text-column m-auto max-w-full p-4 lg:max-w-6xl">
+		<div class="banner relative h-80 w-full space-y-3 overflow-hidden rounded-3xl bg-[#303030]">
+			<div class="text_1 flex gap-12 whitespace-nowrap text-8xl font-bold">
 				<h1 class=" text-white">ABOUT</h1>
 				<h1 class=" text-white-outline">ABOUT</h1>
 				<h1 class=" text-white">ABOUT</h1>
 				<h1 class=" text-white-outline">ABOUT</h1>
 				<h1 class=" text-white">ABOUT</h1>
 			</div>
-			<div class="text_2 flex gap-24 text-8xl whitespace-nowrap font-bold">
+			<div class="text_2 flex gap-24 whitespace-nowrap text-8xl font-bold">
 				<h1 class="text-white-outline -ml-64">โมฟุเนะทีฟ</h1>
 				<div class="inline-flex gap-4">
 					<h1 class="text-white">เกี่ยวกับ</h1>
@@ -46,7 +46,7 @@
 
 				<h1 class="text-white-outline">เกี่ยวกับ</h1>
 			</div>
-			<div class="text_3 flex gap-12 text-8xl -translate-x-[97%] font-bold">
+			<div class="text_3 flex -translate-x-[97%] gap-12 text-8xl font-bold">
 				<h1 class="text-white-outline">MofuNetive</h1>
 				<h1 class="text-white">MofuNetive</h1>
 				<h1 class="text-white-outline">MofuNetive</h1>
@@ -65,13 +65,13 @@
 			<h1 class="text-xl">Who build this website?</h1>
 			<div class=" ml-4">
 				<p>Z0TEExt [Tee/ตี๋] &#60;front end/&#62;</p>
-				<ul class="w-fit list-disc list-inside">
+				<ul class="w-fit list-inside list-disc">
 					<li><a class="object hover:text-[#ffdab9] hover:mix-blend-difference" href="https://github.com/Z0TEExt" target="_blank" rel="noreferrer">GitHub</a></li>
 					<li><a class="object hover:text-[#ffdab9] hover:mix-blend-difference" href="https://twitter.com/Z0TEExt" target="_blank" rel="noreferrer">Twitter</a></li>
 					<li><a class="object hover:text-[#ffdab9] hover:mix-blend-difference" href="https://wakatime.com/@Z0TEExt" target="_blank" rel="noreferrer">Wakatime</a></li>
 				</ul>
 				<p>Faelayis [First/เฟริส] &#60;/back end&#62;</p>
-				<ul class="w-fit list-disc list-inside">
+				<ul class="w-fit list-inside list-disc">
 					<li>
 						<a class="object hover:translate-x-4 hover:text-[#ff936c] hover:mix-blend-difference" href="https://github.com/Faelayis" target="_blank" rel="noreferrer">GitHub</a>
 					</li>

@@ -9,7 +9,7 @@
 </script>
 
 {#if $loading}
-	<div class="loading fixed h-full w-full flex bg-[#fcfcfc] z-50">
-		<img src="https://media.tenor.com/m1MbVZDgHkIAAAAC/sad-disappointed.gif" alt="loading_gif" class=" h-48 m-auto justify-center" />
+	<div class="loading fixed z-50 flex h-full w-full bg-[#fcfcfc]">
+		<img src="https://media.tenor.com/m1MbVZDgHkIAAAAC/sad-disappointed.gif" alt="loading_gif" class=" m-auto h-48 justify-center" />
 	</div>
 {/if}

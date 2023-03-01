@@ -9,14 +9,14 @@
 	}
 
 	* {
-		font-family: 'Kanit', sans-serif;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+		font-family: 'Kanit', sans-serif;
+		cursor: none;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		cursor: none;
 	}
 
 	button {

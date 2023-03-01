@@ -2,9 +2,9 @@
 	import MetaData from '@mofunetive/metadata';
 </script>
 
-<footer class=" text-center text-[#505050] p-4">
-	<p class="object inline-flex left-0">
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none rotate-180 m-auto w-6 h-6 mr-1">
+<footer class=" p-4 text-center text-[#505050]">
+	<p class="object left-0 inline-flex">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none m-auto mr-1 h-6 w-6 rotate-180">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"

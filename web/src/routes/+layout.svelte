@@ -15,14 +15,14 @@
 	});
 </script>
 
-<div class="app flex flex-col min-h-screen bg-white dark:bg-[#303030] overflow-x-clip">
+<div class="app flex min-h-screen flex-col overflow-x-clip bg-white dark:bg-[#303030]">
 	<Loading />
 
 	<Cursor />
 
 	<Header />
 
-	<main class="max-w-full flex flex-col flex-1 p-4 lg:px-10">
+	<main class="flex max-w-full flex-1 flex-col p-4 lg:px-10">
 		<slot />
 	</main>
 
