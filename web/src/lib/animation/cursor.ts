@@ -5,6 +5,7 @@ class CursorAnimation {
 		gsap.set('.cursordot', { x: window.innerWidth / 2, y: window.innerHeight / 2, opacity: 0 });
 		gsap.set('.cursor_text', { opacity: 0, scale: 0 });
 
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const mouseMove = (event: MouseEvent | Event | any) => {
 			const mousePos = {
 				x: event?.clientX,
