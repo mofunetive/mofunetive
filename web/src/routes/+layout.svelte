@@ -1,18 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 
-	import { onMount } from 'svelte';
-
-	import CursorAnimation from '$animation/cursor';
 	import Cursor from '$component/Cursor.svelte';
 	// import Nightmode from '$component/Nightmode.svelte';
 	import Footer from '$component/Footer.svelte';
 	import Header from '$component/Header.svelte';
 	import Loading from '$component/Loading.svelte';
-
-	onMount(() => {
-		new CursorAnimation();
-	});
 </script>
 
 <div class="app flex min-h-screen flex-col overflow-x-clip bg-white dark:bg-[#303030]">
