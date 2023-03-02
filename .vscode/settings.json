@@ -3,6 +3,7 @@
 	"npm.packageManager": "pnpm",
 	"typescript.suggest.autoImports": true,
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"deepscan.enable": true,
 	"files.exclude": {
 		"**/node_modules/": true,
 		"web/.svelte-kit/": true
