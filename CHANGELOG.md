@@ -1,3 +1,18 @@
+## [1.1.2](https://github.com/mofunetive/mofunetive/compare/v1.1.1...v1.1.2) (2023-03-02)
+
+
+### Bug Fixes
+
+* bug mouse on reload ([#15](https://github.com/mofunetive/mofunetive/issues/15)) ([3337c01](https://github.com/mofunetive/mofunetive/commit/3337c010c0e30704caa4969852bfe5868fba2037))
+* **deps:** update dependency @octokit/graphql-schema to v13.6.0 ([#14](https://github.com/mofunetive/mofunetive/issues/14)) ([557b34e](https://github.com/mofunetive/mofunetive/commit/557b34e87b0cc284a30fd505745b5f66ae1ce51c))
+
+
+### Features
+
+* user and project link ([5a10325](https://github.com/mofunetive/mofunetive/commit/5a1032559be3ec244d0bdddb16d7362739315b2b))
+
+
+
 ## [1.1.1](https://github.com/mofunetive/mofunetive/compare/v1.1.0...v1.1.1) (2023-03-01)
 
 
