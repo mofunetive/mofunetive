@@ -2,6 +2,8 @@
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
 
+	import CursorAnimation from '$animation/cursor';
+
 	// import { is_empty } from 'svelte/internal';
 	import type { PageData } from './$types';
 
@@ -10,6 +12,8 @@
 	$: ({ dataTeam } = data);
 
 	onMount(() => {
+		new CursorAnimation();
+
 		gsap.set('.member', { width: '35%', duration: 1 });
 
 		gsap.to('.member', {
