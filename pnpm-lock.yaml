@@ -67,7 +67,7 @@ importers:
       '@babel/core': 7.21.0
       '@graphql-eslint/eslint-plugin': 3.16.1
       '@mofunetive/metadata': 1.1.0
-      '@octokit/graphql-schema': 13.5.0
+      '@octokit/graphql-schema': 13.6.0
       '@octokit/openapi-types': 16.0.0
       '@octokit/rest': 19.0.7
       '@octokit/types': 9.0.0
@@ -89,7 +89,7 @@ importers:
       webpack-cli: ^5.0.1
     dependencies:
       '@mofunetive/metadata': link:../metadata
-      '@octokit/graphql-schema': 13.5.0
+      '@octokit/graphql-schema': 13.6.0
       '@octokit/openapi-types': 16.0.0
       '@octokit/rest': 19.0.7
       '@octokit/types': 9.0.0
@@ -1491,8 +1491,8 @@ packages:
       universal-user-agent: 6.0.0
     dev: false
 
-  /@octokit/graphql-schema/13.5.0:
-    resolution: {integrity: sha512-eH5KwpIWgiV1gwTUG2NUwrLv/kC5L1khKc1MtvrZyjT2p7g4uUCzNaq3U7UB5WZyfF3Zas4+0uOMA3iaNYOfrg==}
+  /@octokit/graphql-schema/13.6.0:
+    resolution: {integrity: sha512-AGQdscoZJBKAvXuu/Dg4If5Jntk7FwYi4zkTGQwNTHrC3JhDjhE1IGoPYsZe8hO9p6nMWkvTjYKhQlD+7aQ7MQ==}
     dependencies:
       graphql: 16.6.0
       graphql-tag: 2.12.6_graphql@16.6.0
