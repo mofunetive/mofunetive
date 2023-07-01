@@ -95,7 +95,7 @@
 			"pnpm run prettier --ignore-unknown"
 		]
 	},
-	"packageManager": "pnpm@7.28.0",
+	"packageManager": "pnpm@7.33.3",
 	"pnpm": {
 		"updateConfig": {
 			"ignoreDependencies": [
