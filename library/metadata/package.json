@@ -30,7 +30,7 @@
 	"typings": "lib-esm/enum.d.ts",
 	"devDependencies": {
 		"@types/node": "18.15.3",
-		"typescript": "4.9.5"
+		"typescript": "5.2.2"
 	},
 	"publishConfig": {
 		"access": "public"
