@@ -12,7 +12,7 @@ on:
 jobs:
     format:
         name: Code Formatting
-        if: github.actor!= 'renovate[bot]'
+        if: ${{ github.actor != 'renovate[bot]' }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout

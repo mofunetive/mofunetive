@@ -16,5 +16,5 @@
 		"types": ["vite/client", "./node_modules/@sveltejs/kit/types/ambient-modules", "./.svelte-kit/ambient.d.ts"]
 	},
 	"extends": "./.svelte-kit/tsconfig.json",
-	"include": ["./package.json", "../package.json"]
+	"include": ["./src", "./package.json", "../package.json"]
 }

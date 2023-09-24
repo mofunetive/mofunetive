@@ -31,7 +31,7 @@
 </script>
 
 <header class="navbar sticky top-0 z-40 m-auto flex h-fit min-w-full max-w-full px-4 pt-4 lg:mr-0 lg:px-10">
-	<div id="nav" class=" flex flex-1 flex-row justify-between rounded-3xl bg-white text-[#505050] transition-shadow dark:bg-[#505050] dark:text-white ">
+	<div id="nav" class=" flex flex-1 flex-row justify-between rounded-3xl bg-white text-[#505050] transition-shadow dark:bg-[#505050] dark:text-white">
 		<div class="corner">
 			<a href="/" class="object">
 				<img src="https://avatars.githubusercontent.com/u/109919769?s=400&u=9c3ba7dbc57d29292dbf148fa8154f3da88c9508&v=4" alt="logo" />

@@ -31,10 +31,10 @@
 
 <section>
 	<div class="text-column m-auto max-w-full lg:max-w-6xl lg:p-4">
-		<div class="bg " />
+		<div class="bg" />
 		<div class="dev-team">
 			{#await dataTeam}
-				<div class="member relative m-auto flex h-40 w-[80%] lg:h-56 ">
+				<div class="member relative m-auto flex h-40 w-[80%] lg:h-56">
 					<div class="member-img absolute inset-y-0 -right-1 z-10 m-auto h-32 w-32 rounded-full border-4 border-white bg-white object-cover object-top">
 						<div class="h-full w-full animate-pulse rounded-full bg-gray-300" />
 					</div>
@@ -55,7 +55,7 @@
 						</h1>
 						<div class="container mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 							{#each nameTeam.members as finalData}
-								<div class="member relative m-auto flex h-40 w-[80%] lg:h-56 ">
+								<div class="member relative m-auto flex h-40 w-[80%] lg:h-56">
 									<img
 										class="member-img absolute inset-y-0 -right-1 z-10 m-auto h-32 w-32 rounded-full border-4 border-white bg-gray-300 object-cover object-top"
 										src="https://cdn.discordapp.com/avatars/{finalData.user.id}/{finalData.user.avatar}"
@@ -64,7 +64,7 @@
 									/>
 									<div class="absolute inset-y-0 m-auto h-28 w-full rounded-full bg-[#303030] p-6">
 										<div class="flex h-full max-w-[50%] flex-col text-center text-white">
-											<h1 class="m-auto text-base line-clamp-1 lg:text-xl">
+											<h1 class="m-auto line-clamp-1 text-base lg:text-xl">
 												<a class="object" target="_blank" rel="noreferrer" href="https://discord.com/users/{finalData.user.id}">{finalData.user.username}</a>
 											</h1>
 											{#if finalData.roles[0] != null}
@@ -72,7 +72,7 @@
 													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto mr-2 h-6 w-6">
 														<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
 													</svg>
-													<h1 class="text-sm xl:text-xl ">{finalData.roles[0] ?? finalData.user.username}</h1>
+													<h1 class="text-sm xl:text-xl">{finalData.roles[0] ?? finalData.user.username}</h1>
 												</div>
 											{/if}
 										</div>

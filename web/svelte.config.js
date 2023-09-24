@@ -11,9 +11,9 @@ const config = {
 		},
 		alias: {
 			'$app/stores': './node_modules/@sveltejs/kit/src/runtime/app/stores.js',
-			$database: './src/lib/database',
-			$animation: './src/lib/animation',
-			$component: './src/lib/components',
+			'$database/*': './src/lib/database/*',
+			'$animation/*': './src/lib/animation/*',
+			'$component/*': './src/lib/components/*',
 			packageMain: '../package.json',
 			packageWeb: './package.json'
 		}
