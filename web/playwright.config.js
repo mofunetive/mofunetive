@@ -9,7 +9,8 @@ const config = {
 		command: 'pnpm run build && pnpm run preview',
 		port: 4399
 	},
-	testDir: 'tests',
+	testDir: './tests',
+	testMatch: '*.js',
 	projects: [
 		{
 			name: 'chromium',
