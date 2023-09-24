@@ -1,3 +1,18 @@
+## [1.1.3](https://github.com/mofunetive/mofunetive/compare/v1.1.2...v1.1.3) (2023-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies (non-major) ([#20](https://github.com/mofunetive/mofunetive/issues/20)) ([9a7b499](https://github.com/mofunetive/mofunetive/commit/9a7b4999693879f7f0cc4d4ffd1683b8d90b685d))
+* playwright test ([3488ade](https://github.com/mofunetive/mofunetive/commit/3488ade7bec1c5da40f2b3f750d9cf75d46004f2))
+
+
+### Performance Improvements
+
+* maintenance ([670927c](https://github.com/mofunetive/mofunetive/commit/670927c2778ae9240fcc560f1c1b523476cc5e22))
+
+
+
 ## [1.1.2](https://github.com/mofunetive/mofunetive/compare/v1.1.1...v1.1.2) (2023-03-02)
 
 
