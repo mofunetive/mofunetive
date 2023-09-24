@@ -67,7 +67,7 @@ jobs:
                   skip_checkout: true
 
             - name: Run Playwright
-              run: npx playwright install --with-deps && pnpm web test
+              run: pnpx playwright install --with-deps && pnpm web test
 
     bumpversion:
         name: Bump Version
