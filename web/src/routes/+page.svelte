@@ -1,6 +1,5 @@
 <script lang="ts">
 	import MetaData from '@mofunetive/metadata';
-	import { onMount } from 'svelte';
 
 	import JoinUs from '$component/main/JoinUs.svelte';
 	import Member from '$component/main/Member.svelte';
