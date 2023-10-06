@@ -2,8 +2,6 @@
 	import MetaData from '@mofunetive/metadata';
 	import { onMount } from 'svelte';
 
-	import CursorAnimation from '$animation/cursor';
-	import animation from '$animation/main';
 	import JoinUs from '$component/main/JoinUs.svelte';
 	import Member from '$component/main/Member.svelte';
 	import OutCollection from '$component/main/OutCollection.svelte';
@@ -14,11 +12,6 @@
 	export let data: PageData;
 
 	$: ({ gitMembers, gitProject, gitRepository } = data);
-
-	onMount(() => {
-		new animation();
-		new CursorAnimation();
-	});
 </script>
 
 <svelte:head>
