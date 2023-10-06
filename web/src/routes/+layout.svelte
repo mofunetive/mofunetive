@@ -2,8 +2,8 @@
 	import '../app.css';
 
 	import { onMount } from 'svelte';
+	
 	import animation from '$animation/main';
-
 	import Cursor from '$component/Cursor.svelte';
 	// import Nightmode from '$component/Nightmode.svelte';
 	import Footer from '$component/Footer.svelte';
