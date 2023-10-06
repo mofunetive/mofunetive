@@ -2,7 +2,6 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import animation from '$animation/main';
-	import CursorAnimation from '$animation/cursor';
 
 	import Cursor from '$component/Cursor.svelte';
 	// import Nightmode from '$component/Nightmode.svelte';
@@ -12,7 +11,6 @@
 
 	onMount(() => {
 		new animation();
-		new CursorAnimation();
 	});
 </script>
 
