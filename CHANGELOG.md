@@ -1,3 +1,16 @@
+## [1.1.4](https://github.com/mofunetive/mofunetive/compare/v1.1.3...v1.1.4) (2023-10-06)
+
+
+### Bug Fixes
+
+* animation not work on refresh page ([fdb263f](https://github.com/mofunetive/mofunetive/commit/fdb263fb2d6eec0d10df5ec57bec2bcfc359e344))
+* cursor bugs ([8fbf78a](https://github.com/mofunetive/mofunetive/commit/8fbf78a63bc42c9e7b9d50aef9c4602a1788188c))
+* deploy error ([d3d840c](https://github.com/mofunetive/mofunetive/commit/d3d840c65f450303e2613ab71705a0cba19a7391))
+* forget onMount func ([5de7be8](https://github.com/mofunetive/mofunetive/commit/5de7be86ec73e46c525beeca06e0c598e8db6681))
+* stupid error ([0bfae5f](https://github.com/mofunetive/mofunetive/commit/0bfae5fe4adffbfdc816b00f1a65d5f591dfa351))
+
+
+
 ## [1.1.3](https://github.com/mofunetive/mofunetive/compare/v1.1.2...v1.1.3) (2023-09-24)
 
 
