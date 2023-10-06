@@ -4,10 +4,7 @@
 	import { version as versionMain } from 'packageMain';
 	import { onMount } from 'svelte';
 
-	import CursorAnimation from '$animation/cursor';
-
 	onMount(() => {
-		new CursorAnimation();
 		gsap.to('.text_1', {
 			translateX: '-65%',
 			duration: 3,

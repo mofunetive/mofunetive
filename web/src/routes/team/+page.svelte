@@ -2,8 +2,6 @@
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
 
-	import CursorAnimation from '$animation/cursor';
-
 	// import { is_empty } from 'svelte/internal';
 	import type { PageData } from './$types';
 
@@ -12,8 +10,6 @@
 	$: ({ dataTeam } = data);
 
 	onMount(() => {
-		new CursorAnimation();
-
 		gsap.set('.member', { width: '35%', duration: 1 });
 
 		gsap.to('.member', {
@@ -50,7 +46,7 @@
 			{:then data}
 				{#each data as nameTeam, i}
 					{#if nameTeam.members.length !== 0}
-						<h1 class="dev-team-text w-fit animate-text bg-gradient-to-r from-red-500 via-purple-400 to-orange-500 bg-clip-text p-4 text-4xl font-bold text-transparent">
+						<h1 class="dev-team-text animate-text w-fit bg-gradient-to-r from-red-500 via-purple-400 to-orange-500 bg-clip-text p-4 text-4xl font-bold text-transparent">
 							{nameTeam.name}
 						</h1>
 						<div class="container mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
