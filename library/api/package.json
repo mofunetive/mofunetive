@@ -38,12 +38,12 @@
 	"typings": "lib-esm/library.d.ts",
 	"dependencies": {
 		"@mofunetive/metadata": "1.1.1",
-		"@octokit/graphql-schema": "14.32.1",
-		"@octokit/openapi-types": "19.0.0",
-		"@octokit/rest": "20.0.1",
-		"@octokit/types": "12.0.0",
-		"axios": "1.5.0",
-		"discord-api-types": "0.37.57"
+		"@octokit/graphql-schema": "14.58.0",
+		"@octokit/openapi-types": "19.1.0",
+		"@octokit/rest": "20.0.2",
+		"@octokit/types": "12.6.0",
+		"axios": "1.6.8",
+		"discord-api-types": "0.37.77"
 	},
 	"devDependencies": {
 		"@babel/core": "7.22.20",
