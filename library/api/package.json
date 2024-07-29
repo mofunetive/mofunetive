@@ -38,10 +38,10 @@
 	"typings": "lib-esm/library.d.ts",
 	"dependencies": {
 		"@mofunetive/metadata": "1.1.1",
-		"@octokit/graphql-schema": "14.32.1",
-		"@octokit/openapi-types": "19.0.0",
-		"@octokit/rest": "20.0.1",
-		"@octokit/types": "12.0.0",
+		"@octokit/graphql-schema": "15.25.0",
+		"@octokit/openapi-types": "22.2.0",
+		"@octokit/rest": "21.0.1",
+		"@octokit/types": "13.5.0",
 		"axios": "1.5.0",
 		"discord-api-types": "0.37.57"
 	},
