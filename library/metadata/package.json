@@ -29,7 +29,7 @@
 	},
 	"typings": "lib-esm/enum.d.ts",
 	"devDependencies": {
-		"@types/node": "20.6.4",
+		"@types/node": "22.13.5",
 		"typescript": "5.2.2"
 	},
 	"publishConfig": {
