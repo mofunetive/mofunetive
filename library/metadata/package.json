@@ -29,8 +29,8 @@
 	},
 	"typings": "lib-esm/enum.d.ts",
 	"devDependencies": {
-		"@types/node": "20.6.4",
-		"typescript": "5.2.2"
+		"@types/node": "20.17.19",
+		"typescript": "5.7.3"
 	},
 	"publishConfig": {
 		"access": "public"
