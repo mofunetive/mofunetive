@@ -3,7 +3,7 @@
 	"extends": ["config:base"],
 	"dependencyDashboard": false,
 	"automerge": false,
-	"ignoreDeps": ["rimraf", "before-after-hook"],
+	"ignoreDeps": ["eslint", "eslint-plugin-unicorn", "before-after-hook"],
 	"packageRules": [
 		{
 			"matchPackageNames": ["typescript", "tslib"],
