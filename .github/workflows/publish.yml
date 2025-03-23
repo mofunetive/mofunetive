@@ -51,7 +51,7 @@ jobs:
                   node-version: ${{ vars.NODE_VERSION }}
 
             - name: Install Dependencies
-              run: bun install
+              run: bun install --verbose
 
             - name: Run ESLint
               run: bun run fix
@@ -88,7 +88,7 @@ jobs:
                   node-version: ${{ vars.NODE_VERSION }}
 
             - name: Install Dependencies
-              run: bun install --ignore-scripts --global @jsdevtools/version-bump-prompt conventional-changelog-cli
+              run: bun install --verbose --ignore-scripts --global @jsdevtools/version-bump-prompt conventional-changelog-cli
 
             - name: Bump Version
               id: bumpversion
@@ -146,7 +146,7 @@ jobs:
                   echo -e "packages:\n    - \"apps/**\"\n    - \"packages/**\"" > pnpm-workspace.yaml
 
             - name: Install Dependencies
-              run: bun install
+              run: bun install --verbose
 
             - name: Clean package.json
               run: |
