@@ -53,8 +53,8 @@ jobs:
             - name: Install Dependencies
               run: bun install --ignore-scripts && bun install
 
-            # - name: Run ESLint
-            #   run: bun run fix
+            - name: Run ESLint
+              run: bun run fix
 
             - name: Automatically Commit Changed
               uses: stefanzweifel/git-auto-commit-action@v4
@@ -139,7 +139,7 @@ jobs:
                   bun-version: ${{ vars.BUN_VERSION }}
 
             - name: Install Dependencies
-              run: bun install
+              run: bun install --ignore-scripts && bun install
 
             - name: Remove pkg packageManager
               run: npm pkg delete packageManager
