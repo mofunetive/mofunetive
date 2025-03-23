@@ -102,7 +102,7 @@ jobs:
             - name: Get Version
               id: package
               if: steps.bumpversion.outcome == 'success'
-              uses: Saionaro/extract-package-version@v1.2.1
+              uses: Saionaro/extract-package-version@v1.3.0
 
             - name: Automatically Commit Changed
               if: steps.package.outcome == 'success'
