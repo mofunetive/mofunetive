@@ -66,9 +66,9 @@
 		"turbo": "2.4.4"
 	},
 	"engines": {
+		"bun": ">=1.2.2",
 		"node": ">=20.x",
-		"pnpm": ">=10.x",
-		"bun": ">=1.2.2"
+		"pnpm": ">=10.x"
 	},
 	"lint-staged": {
 		"*.json": [
