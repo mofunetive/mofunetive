@@ -1,5 +1,0 @@
-{
-	"packageManager": "pnpm",
-	"upgrade": false,
-	"reject": ["before-after-hook"]
-}

@@ -1,27 +1,21 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"pipeline": {
+	"ui": "tui",
+	"tasks": {
 		"build": {
-			"dependsOn": ["^build-esm", "^build"],
-			"outputs": ["dist/**", ".svelte-kit/**"],
-			"cache": false
+			"outputs": ["lib-esm/**"],
+			"cache": true
 		},
-		"build-esm": {
-			"dependsOn": ["^build-esm"],
-			"outputs": ["dist/**", "lib-esm/**"]
-		},
-		"test": {
-			"dependsOn": ["^build"],
-			"outputs": []
+		"check-types": {
+			"dependsOn": ["^check-types"]
 		},
 		"dev": {
-			"cache": true
-		},
-		"start": {
-			"cache": true
+			"persistent": true,
+			"cache": false
 		},
 		"clean": {
-			"cache": false
+			"cache": false,
+			"persistent": true
 		}
 	}
 }

@@ -1,0 +1,60 @@
+{
+	"private": false,
+	"name": "@mofunetive/api",
+	"version": "1.0.1",
+	"license": "MPL-2.0",
+	"author": "Faelayis <48393914+Faelayis@users.noreply.github.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mofunetive/mofunetive.git",
+		"directory": "packages/api"
+	},
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./esm/library.js",
+			"require": "./dist/library.js"
+		}
+	},
+	"module": "esm/library.js",
+	"files": [
+		"dist",
+		"esm"
+	],
+	"scripts": {
+		"build": "bun esbuild.ts && tsc --emitDeclarationOnly --outDir esm",
+		"ci:bump": "bump",
+		"clean": "rimraf .turbo dist esm tsconfig.tsbuildinfo node_modules",
+		"format": "prettier --write .",
+		"postinstall": "bun run build",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	},
+	"typings": "esm/library.d.ts",
+	"dependencies": {
+		"@mofunetive/metadata": "1.1.1",
+		"@octokit/graphql-schema": "14.32.1",
+		"@octokit/openapi-types": "19.0.0",
+		"@octokit/rest": "20.0.1",
+		"@octokit/types": "12.0.0",
+		"axios": "1.5.0",
+		"discord-api-types": "0.37.57"
+	},
+	"devDependencies": {
+		"@babel/core": "7.22.20",
+		"@graphql-eslint/eslint-plugin": "3.20.1",
+		"@types/node": "20.6.4",
+		"cross-env": "7.0.3",
+		"graphql": "16.8.1",
+		"ts-loader": "9.4.4",
+		"ts-node": "10.9.1",
+		"tslib": "2.6.2",
+		"typescript": "5.2.2",
+		"typescript-transform-paths": "3.4.6"
+	},
+	"publishConfig": {
+		"access": "public",
+		"linkDirectory": false
+	},
+	"svelte": "esm/library.js"
+}

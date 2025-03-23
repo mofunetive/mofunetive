@@ -4,17 +4,14 @@
 	"typescript.suggest.autoImports": true,
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"deepscan.enable": true,
-	"files.exclude": {
-		"**/node_modules/": true,
-		"web/.svelte-kit/": true,
-		"**/.turbo": true,
-		"**/lib-esm": true,
-		"**/dist": true,
-		"**/*.tsbuildinfo": true
-	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
+	// "files.exclude": {
+	// 	"**/node_modules/": true,
+	// 	"web/.svelte-kit/": true,
+	// 	"**/.turbo": true,
+	// 	"**/lib-esm": true,
+	// 	"**/dist": true,
+	// 	"**/*.tsbuildinfo": true
+	// },
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},

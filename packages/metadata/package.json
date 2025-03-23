@@ -1,0 +1,40 @@
+{
+	"private": false,
+	"name": "@mofunetive/metadata",
+	"version": "1.1.1",
+	"license": "MPL-2.0",
+	"author": "Faelayis <48393914+Faelayis@users.noreply.github.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mofunetive/mofunetive.git",
+		"directory": "packages/metadata"
+	},
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./esm/enum.js",
+			"require": "./dist/enum.js"
+		}
+	},
+	"files": [
+		"dist",
+		"esm"
+	],
+	"scripts": {
+		"build": "bun esbuild.ts && tsc --emitDeclarationOnly --outDir esm",
+		"ci:bump": "bump",
+		"clean": "rimraf .turbo dist esm tsconfig.tsbuildinfo node_modules",
+		"format": "prettier --write .",
+		"postinstall": "bun run build",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	},
+	"typings": "esm/enum.d.ts",
+	"devDependencies": {
+		"@types/node": "22.13.11",
+		"typescript": "5.8.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
