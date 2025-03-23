@@ -3,8 +3,8 @@
 
 echo "→ husky (pre-push)"
 
-if [ $(pnpm -v) ]; then
-   pnpm run --silent pre-push
+if [ $(bun -v) ]; then
+   bun run --silent pre-push
 else
-   echo "❌ This project use pnpm." && exit 127
+   echo "❌ This project use bun." && exit 127
 fi

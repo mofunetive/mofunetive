@@ -40,23 +40,21 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Setup PNPM
-              uses: pnpm/action-setup@v2
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
               with:
-                  run_install: false
-                  version: ${{ vars.PNPM_VERSION }}
+                  bun-version: ${{ vars.BUN_VERSION }}
 
             - name: Setup Node
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ vars.NODE_VERSION }}
-                  cache: pnpm
 
             - name: Install Dependencies
-              run: pnpm install --ignore-scripts && pnpm install
+              run: bun install --ignore-scripts && bun install
 
             - name: Run ESLint
-              run: pnpm run fix
+              run: bun run fix
 
             - name: Automatically Commit Changed
               uses: stefanzweifel/git-auto-commit-action@v4
@@ -65,9 +63,6 @@ jobs:
                   commit_options: "--no-verify"
                   commit_message: "chore(eslint): fix problems"
                   skip_checkout: true
-
-            - name: Run Playwright
-              run: pnpx playwright install --with-deps && pnpm web test
 
     bumpversion:
         name: Bump Version
@@ -84,26 +79,25 @@ jobs:
               with:
                   fetch-depth: 0
 
-            - name: Setup PNPM
-              uses: pnpm/action-setup@v2
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
               with:
-                  run_install: |
-                      - recursive: true
-                        args: [--frozen-lockfile, --strict-peer-dependencies, --ignore-scripts]
-                      - args: [--global, '@jsdevtools/version-bump-prompt', 'conventional-changelog-cli']
+                  bun-version: ${{ vars.BUN_VERSION }}
 
             - name: Setup Node
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ vars.NODE_VERSION }}
-                  cache: pnpm
+
+            - name: Install Dependencies
+              run: bun install --ignore-scripts --global @jsdevtools/version-bump-prompt conventional-changelog-cli
 
             - name: Bump Version
               id: bumpversion
-              run: pnpm bump ${{ github.event.inputs.bumpversion }}
+              run: bun bump ${{ github.event.inputs.bumpversion }}
 
             - name: Update Changelog
-              run: pnpm run changelog:generate
+              run: bun run changelog:generate
 
             - name: Get Version
               id: package
@@ -139,14 +133,16 @@ jobs:
                   run_install: false
                   version: ${{ vars.PNPM_VERSION }}
 
-            - name: Setup Node
-              uses: actions/setup-node@v3
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
               with:
-                  node-version: ${{ vars.NODE_VERSION }}
-                  cache: pnpm
+                  bun-version: ${{ vars.BUN_VERSION }}
 
             - name: Install Dependencies
-              run: pnpm install --ignore-scripts && pnpm install
+              run: bun install --ignore-scripts && bun install
+
+            - name: Remove pkg packageManager
+              run: npm pkg delete packageManager
 
             - name: Remove pkg scripts
               run: pnpm --filter=@mofunetive/* pkg delete scripts

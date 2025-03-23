@@ -3,10 +3,10 @@
 
 echo "→ husky (commit-msg)"
 
-if [ $(pnpm -v) ]; then
-  pnpm commitlint --edit $1
-elif [ $(npx -v) ]; then
-  npx commitlint --edit $1
+if [ $(bun -v) ]; then
+   bun commitlint --edit $1
+elif [ $(bunx -v) ]; then
+   bunx commitlint --edit $1
 else
-  echo "❌ This project use (pnpm|npx)."
+   echo "❌ This project use (bun|bunx)."
 fi
