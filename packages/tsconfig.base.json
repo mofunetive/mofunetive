@@ -17,7 +17,13 @@
 		"noErrorTruncation": true,
 		"forceConsistentCasingInFileNames": true,
 		"composite": true,
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"paths": {
+			"@mofunetive/*": [
+				"./packages/*"
+			]
+		}
 	},
 	"references": [
 		{

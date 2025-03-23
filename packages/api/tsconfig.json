@@ -11,11 +11,17 @@
 		"typeRoots": [
 			"../../node_modules/@types",
 			"../metadata/node_modules/@types"
-		]
+		],
+		"composite": true
 	},
 	"display": "@mofunetive/api",
 	"extends": "../tsconfig.base.json",
 	"include": [
 		"src/**/*.ts"
+	],
+	"references": [
+		{
+			"path": "../metadata"
+		}
 	]
 }

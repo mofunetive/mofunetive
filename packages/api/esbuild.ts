@@ -5,6 +5,7 @@ const buildOptions: esbuild.BuildOptions = {
 	platform: "node",
 	sourcemap: true,
 	bundle: true,
+	external: ["@mofunetive/metadata"],
 };
 
 const builds: esbuild.BuildOptions[] = [
