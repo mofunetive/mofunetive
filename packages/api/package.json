@@ -24,7 +24,7 @@
 	"scripts": {
 		"build": "bun esbuild.ts && tsc --emitDeclarationOnly --outDir esm",
 		"ci:bump": "bump",
-		"clean": "rimraf .turbo dist esm tsconfig.tsbuildinfo node_modules",
+		"clean": "bunx rimraf .turbo dist esm tsconfig.tsbuildinfo node_modules",
 		"dev": "tsc --watch",
 		"format": "prettier --write .",
 		"postinstall": "bun run build",
@@ -50,8 +50,7 @@
 		"ts-loader": "9.4.4",
 		"ts-node": "10.9.1",
 		"tslib": "2.6.2",
-		"typescript": "5.2.2",
-		"typescript-transform-paths": "3.4.6"
+		"typescript": "5.2.2"
 	},
 	"publishConfig": {
 		"access": "public",

@@ -9,7 +9,7 @@
 		"bump-version": "bun --filter '*' ci:bump",
 		"changelog:generate": "bun changelog:update -r 0",
 		"changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s",
-		"clean": "turbo run clean",
+		"clean": "turbo run clean && bun run clean:packages",
 		"clean:full": "turbo run clean",
 		"clean:node_modules": "bunx rimraf@3 './**/node_modules'",
 		"clean:packages": "bunx rimraf@3 './**/node_modules/@mofunetive'",
