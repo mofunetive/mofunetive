@@ -5,12 +5,12 @@ on:
             notest:
                 description: "Skip (Test & Fix Problems)"
                 required: false
-                default: false
+                default: true
                 type: boolean
             nobumpversion:
                 description: "Skip (Bump version)"
                 required: false
-                default: false
+                default: true
                 type: boolean
             bumpversion:
                 type: choice
@@ -141,11 +141,14 @@ jobs:
             - name: Install Dependencies
               run: bun install --ignore-scripts && bun install
 
-            - name: Remove pkg packageManager
+            - name: Remove package.packageManager
               run: npm pkg delete packageManager
 
-            - name: Remove pkg scripts
+            - name: Remove package.scripts
               run: pnpm --filter=@mofunetive/* pkg delete scripts
+
+            - name: Create pnpm-workspace.yaml
+              run: echo -e "packages:\n    - \"apps/**\"\n    - \"packages/**\"" > pnpm-workspace.yaml
 
             - name: Setup Configuration
               run: |
