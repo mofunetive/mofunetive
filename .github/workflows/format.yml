@@ -31,8 +31,8 @@ jobs:
             - name: Install Dependencies
               run: bun install --ignore-scripts
 
-            # - name: Run ESLint
-            #   run: bun run fix
+            - name: Run ESLint
+              run: bun run fix
 
             - name: Run Prettier
               run: bun run prettier
