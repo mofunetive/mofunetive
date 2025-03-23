@@ -3,14 +3,14 @@
 	"ui": "tui",
 	"tasks": {
 		"build": {
-			"outputs": ["lib-esm/**"],
+			"outputs": ["dist", "esm"],
 			"cache": true
-		},
-		"check-types": {
-			"dependsOn": ["^check-types"]
 		},
 		"dev": {
 			"persistent": true,
+			"cache": false
+		},
+		"format": {
 			"cache": false
 		},
 		"clean": {

@@ -10,6 +10,8 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@mofunetive/api": "workspace:*",
+		"@mofunetive/metadata": "workspace:*",
 		"@tailwindcss/vite": "4.0.15",
 		"framer-motion": "12.5.0",
 		"react": "19.0.0",

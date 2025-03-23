@@ -1,17 +1,17 @@
 {
 	"npm.runSilent": true,
-	"npm.packageManager": "pnpm",
+	"npm.packageManager": "bun",
 	"typescript.suggest.autoImports": true,
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"deepscan.enable": true,
-	// "files.exclude": {
-	// 	"**/node_modules/": true,
-	// 	"web/.svelte-kit/": true,
-	// 	"**/.turbo": true,
-	// 	"**/lib-esm": true,
-	// 	"**/dist": true,
-	// 	"**/*.tsbuildinfo": true
-	// },
+	"files.exclude": {
+		// ".husky": true,
+		// "**/node_modules/": true,
+		// "**/.turbo": true,
+		// "**/esm": true,
+		// "**/dist": true,
+		// "**/*.tsbuildinfo": true
+	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},

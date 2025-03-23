@@ -51,7 +51,7 @@ jobs:
                   node-version: ${{ vars.NODE_VERSION }}
 
             - name: Install Dependencies
-              run: bun install --ignore-scripts && bun install
+              run: bun install
 
             - name: Run ESLint
               run: bun run fix
@@ -70,9 +70,7 @@ jobs:
         runs-on: ubuntu-latest
         outputs:
             outversion: ${{ steps.package.outputs.version }}
-        if: |
-            always() && github.event.inputs.nobumpversion == 'false' &&
-            !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
+        if: always() && github.event.inputs.nobumpversion == 'false' && !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
         steps:
             - name: Checkout
               uses: actions/checkout@v4
@@ -118,9 +116,7 @@ jobs:
         name: Publish Package
         needs: [bumpversion]
         runs-on: ubuntu-latest
-        if: |
-            always() && github.event.inputs.deploy_package == 'true' &&
-            !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
+        if: always() && github.event.inputs.deploy_package == 'true' && !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
         steps:
             - name: Checkout
               uses: actions/checkout@v4
@@ -138,17 +134,24 @@ jobs:
               with:
                   bun-version: ${{ vars.BUN_VERSION }}
 
+            - name: Setup Configure
+              run: |
+                  # Setup .npmrc
+                  echo "always-auth=true" >> .npmrc
+                  echo "git-checks=false" >> .npmrc
+                  echo "publish-branch=production" >> .npmrc
+                  echo "auto-install-peers=true" >> .npmrc
+
+                  # Configure pnpm-workspace.yaml
+                  echo -e "packages:\n    - \"apps/**\"\n    - \"packages/**\"" > pnpm-workspace.yaml
+
             - name: Install Dependencies
-              run: bun install --ignore-scripts && bun install
+              run: bun install
 
-            - name: Remove package.packageManager
-              run: npm pkg delete packageManager
-
-            - name: Remove package.scripts
-              run: pnpm --filter=@mofunetive/* pkg delete scripts
-
-            - name: Create pnpm-workspace.yaml
-              run: echo -e "packages:\n    - \"apps/**\"\n    - \"packages/**\"" > pnpm-workspace.yaml
+            - name: Clean package.json
+              run: |
+                  npm pkg delete packageManager
+                  pnpm --filter=@mofunetive/* pkg delete scripts
 
             - name: Setup Configuration
               run: |
@@ -174,9 +177,7 @@ jobs:
         name: Publish WebSite
         needs: [bumpversion]
         runs-on: ubuntu-latest
-        if: |
-            always() && github.event.inputs.deploy_web == 'true' &&
-            !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
+        if: always() && github.event.inputs.deploy_web == 'true' && !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
         steps:
             - name: Checkout
               uses: actions/checkout@v4
