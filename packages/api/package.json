@@ -34,17 +34,17 @@
 	"typings": "esm/library.d.ts",
 	"dependencies": {
 		"@mofunetive/metadata": "1.1.1",
-		"@octokit/graphql-schema": "14.32.1",
-		"@octokit/openapi-types": "19.0.0",
-		"@octokit/rest": "20.0.1",
-		"@octokit/types": "12.0.0",
+		"@octokit/graphql-schema": "15.26.0",
+		"@octokit/openapi-types": "24.2.0",
+		"@octokit/rest": "21.1.1",
+		"@octokit/types": "13.10.0",
 		"axios": "1.5.0",
 		"discord-api-types": "0.37.57"
 	},
 	"devDependencies": {
 		"@babel/core": "7.22.20",
-		"@graphql-eslint/eslint-plugin": "3.20.1",
-		"@types/node": "20.6.4",
+		"@graphql-eslint/eslint-plugin": "4.3.0",
+		"@types/node": "22.13.11",
 		"cross-env": "7.0.3",
 		"graphql": "16.8.1",
 		"ts-loader": "9.4.4",
