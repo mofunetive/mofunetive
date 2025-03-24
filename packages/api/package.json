@@ -1,14 +1,14 @@
 {
-	"private": false,
 	"name": "@mofunetive/api",
 	"version": "1.0.1",
-	"license": "MPL-2.0",
-	"author": "Faelayis <48393914+Faelayis@users.noreply.github.com>",
+	"private": false,
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mofunetive/mofunetive.git",
 		"directory": "packages/api"
 	},
+	"license": "MPL-2.0",
+	"author": "Faelayis <48393914+Faelayis@users.noreply.github.com>",
 	"type": "module",
 	"exports": {
 		".": {
@@ -16,7 +16,9 @@
 			"require": "./dist/library.js"
 		}
 	},
+	"svelte": "esm/library.js",
 	"module": "esm/library.js",
+	"typings": "esm/library.d.ts",
 	"files": [
 		"dist",
 		"esm"
@@ -31,7 +33,6 @@
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
 	},
-	"typings": "esm/library.d.ts",
 	"dependencies": {
 		"@mofunetive/metadata": "1.1.1",
 		"@octokit/graphql-schema": "14.32.1",
@@ -55,6 +56,5 @@
 	"publishConfig": {
 		"access": "public",
 		"linkDirectory": false
-	},
-	"svelte": "esm/library.js"
+	}
 }
