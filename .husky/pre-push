@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 echo "→ husky (pre-push)"
 
 if [ $(bun -v) ]; then
@@ -8,3 +5,5 @@ if [ $(bun -v) ]; then
 else
    echo "❌ This project use bun." && exit 127
 fi
+
+echo

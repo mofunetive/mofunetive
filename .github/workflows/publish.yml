@@ -40,6 +40,12 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
+            - name: Cache Bun dependencies
+              uses: actions/cache@v4
+              with:
+                  path: ~/.bun/install/cache
+                  key: ${{ runner.os }}-bun-cache-${{ hashFiles('**/package.json', '**/bun.lockb') }}
+
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
               with:
@@ -76,6 +82,12 @@ jobs:
               uses: actions/checkout@v4
               with:
                   fetch-depth: 0
+
+            - name: Cache Bun dependencies
+              uses: actions/cache@v4
+              with:
+                  path: ~/.bun/install/cache
+                  key: ${{ runner.os }}-bun-cache-${{ hashFiles('**/package.json', '**/bun.lockb') }}
 
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
@@ -122,6 +134,12 @@ jobs:
               uses: actions/checkout@v4
               with:
                   ref: ${{ github.ref }}
+
+            - name: Cache Bun dependencies
+              uses: actions/cache@v4
+              with:
+                  path: ~/.bun/install/cache
+                  key: ${{ runner.os }}-bun-cache-${{ hashFiles('**/package.json', '**/bun.lockb') }}
 
             - name: Setup PNPM
               uses: pnpm/action-setup@v2
