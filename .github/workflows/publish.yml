@@ -142,7 +142,7 @@ jobs:
                   key: ${{ runner.os }}-bun-cache-${{ hashFiles('**/package.json', '**/bun.lockb') }}
 
             - name: Setup PNPM
-              uses: pnpm/action-setup@v2
+              uses: pnpm/action-setup@v4
               with:
                   run_install: false
                   version: ${{ vars.PNPM_VERSION }}
