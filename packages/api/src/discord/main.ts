@@ -4,7 +4,7 @@ import { Snowflake } from "discord-api-types/v10";
 
 import { config as baseconfig } from "../axios/config/base.js";
 import { interceptors } from "../axios/function/interceptors.js";
-import { GetTeamMembers, Member, Roles } from "./types";
+import type { GetTeamMembers, Member, Roles } from "./types.d.ts";
 
 export class DiscordAPI extends Axios {
 	private teamMembers: GetTeamMembers[] = [];

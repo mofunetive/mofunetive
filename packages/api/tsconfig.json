@@ -17,7 +17,8 @@
 	"display": "@mofunetive/api",
 	"extends": "../tsconfig.base.json",
 	"include": [
-		"src/**/*.ts"
+		"src/**/*.ts",
+		"src/**/types.d.ts"
 	],
 	"references": [
 		{
