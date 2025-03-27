@@ -25,7 +25,7 @@
 		"build": "bun esbuild.ts && tsc --emitDeclarationOnly --outDir esm",
 		"ci:bump": "bump",
 		"clean": "bunx rimraf .turbo dist esm tsconfig.tsbuildinfo node_modules",
-		"dev": "tsc --watch",
+		"dev": "bun --watch esbuild.ts --watch",
 		"format": "prettier --write .",
 		"postinstall": "bun run build",
 		"lint": "eslint .",

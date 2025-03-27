@@ -1,8 +1,7 @@
 import * as esbuild from "esbuild";
-
+const isWatchMode = process.argv.includes("--watch");
 const buildOptions: esbuild.BuildOptions = {
 	entryPoints: ["./enum.ts"],
-	platform: "node",
 	sourcemap: true,
 	bundle: true,
 };
@@ -20,4 +19,13 @@ const builds: esbuild.BuildOptions[] = [
 	},
 ];
 
-await Promise.all(builds.map((options) => esbuild.build(options)));
+if (isWatchMode) {
+	for (const options of builds) {
+		const context = await esbuild.context(options);
+		await context.watch();
+
+		console.log(`${options.format} Watching for changes...`);
+	}
+} else {
+	await Promise.all(builds.map((options) => esbuild.build(options)));
+}
