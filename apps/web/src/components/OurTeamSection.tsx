@@ -28,7 +28,15 @@ const OutTeamSection = () => {
 				<div key={index} className="max-w-5xl m-auto">
 					<div className=" relative flex">
 						<div className="w-[40%] sm:w-[20%] bg-white"></div>
-						<img src={member.avatar_url} alt="test" className="h-[100vh] w-[60%] sm:w-[80%] object-cover" />
+						<img
+							src={`${member.html_url}/${member.login}/blob/main/resources/mofunetive/thumbnail.png?raw=true`}
+							alt={member.login || "Member Avatar"}
+							className="h-[100vh] w-[60%] sm:w-[80%] object-cover"
+							style={{ aspectRatio: "16/9" }}
+							onError={async (event) => {
+								event.currentTarget.src = member.avatar_url;
+							}}
+						/>
 						<div className="absolute flex flex-col justify-between h-full w-full px-16 pt-8">
 							<div className="flex flex-col gap-2">
 								<motion.div
