@@ -6,19 +6,19 @@ export interface MemberInfo {
 	type: string;
 }
 
-enum MemberType {
+export enum MemberType {
 	Fullstack = "Fullstack",
 	Backend = "Backend",
 	Frontend = "Frontend",
 }
 
-enum MemberCategory {
+export enum MemberCategory {
 	Developer = "Developer",
 	Designer = "Designer",
 	Manager = "Manager",
 }
 
-enum MemberRole {
+export enum MemberRole {
 	Founder = "Founder",
 	Member = "Member",
 	Contributor = "Contributor",

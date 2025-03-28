@@ -1,7 +1,6 @@
 import { Discord } from "./discord.js";
 import { Github } from "./github.js";
-import { Member, MemberInfo } from "./member.js";
+import { Member, MemberCategory, MemberInfo, MemberRole, MemberType } from "./member.js";
 
-export { Discord, Github, Member };
-export type { MemberInfo };
+export { Discord, Github, Member, MemberCategory, MemberInfo, MemberRole, MemberType };
 export default Github;
