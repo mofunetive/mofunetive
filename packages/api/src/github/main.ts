@@ -1,5 +1,5 @@
 import MetaData from "@mofunetive/metadata";
-import { Organization, Repository, UserStatusEdge } from "@octokit/graphql-schema";
+import { Organization, OrganizationMemberEdge, Repository, UserStatusEdge } from "@octokit/graphql-schema";
 import { Octokit } from "@octokit/rest";
 
 import type { GetAll, GetImages, GetMembers, GetProject, GetRepository, Octokit as OctokitType } from "./types.d.ts";
@@ -62,13 +62,26 @@ export class GitHubAPI {
 	public async GetMembers(): Promise<GetMembers["response"]> {
 		console.debug("[API]:GetMembers");
 		return this.GetMembersGraphql().then(async (members) => {
-			if (members.length !== this.members.length) {
-				for (const key of members) {
+			if (members.memberStatuses.length !== this.members.length) {
+				for (const key of members.memberStatuses) {
 					await this.octokit.request(`GET /users/${key.node.user.login}`).then((user: OctokitType["response"]["User"]) => {
 						this.members.push(user.data);
 					});
 				}
 			}
+
+			const sortedMembersWithRole = members.membersWithRole.sort((a, b) => {
+				if (a.role === "ADMIN" && b.role !== "ADMIN") return -1;
+				if (a.role !== "ADMIN" && b.role === "ADMIN") return 1;
+				return a.node.login.localeCompare(b.node.login);
+			});
+
+			this.members = sortedMembersWithRole
+				.map((member) => {
+					return this.members.find((m) => m.login === member.node.login);
+				})
+				.filter(Boolean);
+
 			return this.members;
 		});
 	}
@@ -158,7 +171,10 @@ export class GitHubAPI {
 		}
 	}
 
-	protected async GetMembersGraphql(options?: { details?: boolean }): Promise<UserStatusEdge[]> {
+	protected async GetMembersGraphql(options?: { details?: boolean }): Promise<{
+		memberStatuses: UserStatusEdge[];
+		membersWithRole: OrganizationMemberEdge[];
+	}> {
 		return this.octokit
 			.graphql<{
 				organization: Organization;
@@ -180,13 +196,27 @@ export class GitHubAPI {
 									}
 								}
 							}
+							membersWithRole(first: 100) {
+								edges {
+									node {
+										login
+									}
+									role
+								}
+							}
 						}
 					}
 				`,
 				details: options?.details,
 			})
 			.then((value) => {
-				return value.organization.memberStatuses.edges;
+				value.organization.memberStatuses.edges = value.organization.memberStatuses.edges.filter((edge) => edge.node.user.login !== "MofuNetiveTeam");
+				value.organization.membersWithRole.edges = value.organization.membersWithRole.edges.filter((edge) => edge.node.login !== "MofuNetiveTeam");
+
+				return {
+					memberStatuses: value.organization.memberStatuses.edges,
+					membersWithRole: value.organization.membersWithRole.edges,
+				};
 			});
 	}
 
