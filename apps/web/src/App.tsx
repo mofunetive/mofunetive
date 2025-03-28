@@ -1,12 +1,12 @@
-import HomeSection from "./components/HomeSection";
-import OutProjectSection from "./components/OurProjectSection";
+// import HomeSection from "./components/HomeSection";
+// import OutProjectSection from "./components/OurProjectSection";
 import OutTeamSection from "./components/OurTeamSection";
 
 const App = () => {
 	return (
 		<main className="container m-auto pb-96 bg-white">
-			<HomeSection />
-			<OutProjectSection />
+			{/* <HomeSection /> */}
+			{/* <OutProjectSection /> */}
 			<OutTeamSection />
 		</main>
 	);

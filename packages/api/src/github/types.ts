@@ -1,3 +1,4 @@
+import { MemberInfo } from "@mofunetive/metadata";
 import type { components, operations } from "@octokit/openapi-types";
 import type { Endpoints } from "@octokit/types";
 
@@ -10,7 +11,7 @@ export interface GetAll {
 }
 
 export interface GetMembers {
-	response: Octokit["response"]["User"]["data"][];
+	response: (Octokit["response"]["User"]["data"] & { metadata: MemberInfo | null })[];
 }
 export interface GetRepository {
 	parameters: {

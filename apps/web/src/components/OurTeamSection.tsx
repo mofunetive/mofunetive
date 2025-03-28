@@ -76,7 +76,7 @@ const OutTeamSection = () => {
 									viewport={{ amount: 0.5 }}
 									className="w-fit bg-white whitespace-nowrap overflow-hidden"
 								>
-									<p className="px-4 py-2 text-6xl">04</p>
+									<p className="px-4 py-2 text-6xl">{(index + 1).toString().padStart(2, "0")}</p>
 								</motion.div>
 							</div>
 
@@ -104,7 +104,7 @@ const OutTeamSection = () => {
 										viewport={{ amount: 0.5 }}
 										className="w-fit bg-white whitespace-nowrap overflow-hidden"
 									>
-										<a href={member.url} target="_blank" rel="noopener noreferrer" className="px-2 py-1 text-[#2F2F2F]">
+										<a href={member.html_url} target="_blank" rel="noopener noreferrer" className="px-2 py-1 text-[#2F2F2F]">
 											{member.login}
 										</a>
 									</motion.div>
@@ -133,7 +133,7 @@ const OutTeamSection = () => {
 										viewport={{ amount: 0.5 }}
 										className="w-fit bg-white whitespace-nowrap overflow-hidden"
 									>
-										<p className="px-2 py-1 text-[#2F2F2F]">{member.location}</p>
+										<p className="px-2 py-1 text-[#2F2F2F]">{member.location || "?"}</p>
 									</motion.div>
 								</div>
 

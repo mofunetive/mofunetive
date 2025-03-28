@@ -1,3 +1,4 @@
+import { Member } from "@mofunetive/metadata";
 import MetaData from "@mofunetive/metadata";
 import { Organization, OrganizationMemberEdge, Repository, UserStatusEdge } from "@octokit/graphql-schema";
 import { Octokit } from "@octokit/rest";
@@ -65,7 +66,18 @@ export class GitHubAPI {
 			if (members.memberStatuses.length !== this.members.length) {
 				for (const key of members.memberStatuses) {
 					await this.octokit.request(`GET /users/${key.node.user.login}`).then((user: OctokitType["response"]["User"]) => {
-						this.members.push(user.data);
+						this.members.push(
+							Member[key.node.user.login.toLowerCase()]
+								? {
+										...user.data,
+										metadata: Member[key.node.user.login.toLowerCase()],
+									}
+								: {
+										...user.data,
+										// eslint-disable-next-line unicorn/no-null
+										metadata: null,
+									},
+						);
 					});
 				}
 			}

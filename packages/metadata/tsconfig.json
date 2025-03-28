@@ -3,12 +3,14 @@
 	"display": "@mofunetive/metadata",
 	"extends": "../tsconfig.base.json",
 	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./dist",
 		"types": [
 			"node"
 		],
 		"composite": true
 	},
 	"include": [
-		"./enum.ts"
+		"src/**/*.ts"
 	]
 }

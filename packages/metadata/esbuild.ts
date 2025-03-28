@@ -1,7 +1,7 @@
 import * as esbuild from "esbuild";
 const isWatchMode = process.argv.includes("--watch");
 const buildOptions: esbuild.BuildOptions = {
-	entryPoints: ["./enum.ts"],
+	entryPoints: ["./src/enum.ts"],
 	sourcemap: true,
 	bundle: true,
 };

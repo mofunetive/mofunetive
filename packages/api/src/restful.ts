@@ -2,7 +2,7 @@ import { Axios, AxiosRequestConfig } from "axios";
 
 import { config as baseconfig } from "./axios/config/base.js";
 import { interceptors } from "./axios/function/interceptors.js";
-import type { GetAll, GetProject, Octokit as OctokitType } from "./github/types.d.ts";
+import type { GetAll, GetMembers, GetProject, GetRepository } from "./github/types.d.ts";
 
 export class RESTfulAPI extends Axios {
 	constructor(config?: AxiosRequestConfig) {
@@ -17,6 +17,6 @@ export class RESTfulAPI extends Axios {
 
 	public GetAll = (): Promise<GetAll["response"]> => this.get("GetAll");
 	public GetProject = (): Promise<GetProject["response"]> => this.get("GetProject");
-	public GetMembers = (): Promise<OctokitType["response"]["User"]["data"][]> => this.get("GetMembers");
-	public GetRepository = (): Promise<OctokitType["response"]["OrganizationsRepos"]["data"]> => this.get("GetRepo");
+	public GetMembers = (): Promise<GetMembers["response"]> => this.get("GetMembers");
+	public GetRepository = (): Promise<GetRepository["response"]> => this.get("GetRepo");
 }
