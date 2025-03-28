@@ -55,7 +55,7 @@ const OutTeamSection = () => {
 									viewport={{ amount: 0.5 }}
 									className="w-fit bg-[#2F2F2F] whitespace-nowrap overflow-hidden"
 								>
-									<p className="px-4 py-2 text-4xl font-bold text-white">Founder</p>
+									<p className="px-4 py-2 text-4xl font-bold text-white">{member.metadata?.role || "Member"}</p>
 								</motion.div>
 							</div>
 
@@ -144,7 +144,7 @@ const OutTeamSection = () => {
 									viewport={{ amount: 0.5 }}
 									className="w-fit bg-white whitespace-nowrap overflow-hidden"
 								>
-									<p className="px-8 py-4 text-7xl text-[#2F2F2F]">{member.metadata?.category}</p>
+									<p className="px-8 py-4 text-7xl text-[#2F2F2F]">{member.metadata?.type}</p>
 								</motion.div>
 							</div>
 						</div>
