@@ -1,5 +1,4 @@
-import { Member } from "@mofunetive/metadata";
-import MetaData from "@mofunetive/metadata";
+import { Github, Member } from "@mofunetive/metadata";
 import { Organization, OrganizationMemberEdge, Repository, UserStatusEdge } from "@octokit/graphql-schema";
 import { Octokit } from "@octokit/rest";
 
@@ -46,7 +45,7 @@ export class GitHubAPI {
 		console.debug("[API]:GetRepo");
 		return this.octokit
 			.request(
-				`GET /orgs/${MetaData.name}/repos`,
+				`GET /orgs/${Github.name}/repos`,
 				options ??
 					({
 						type: "public",
@@ -136,7 +135,7 @@ export class GitHubAPI {
 				} as OctokitType["parameters"]["UserRepos"])
 				.then(async (repos: OctokitType["response"]["UserRepos"]) => {
 					for (const repository of repos.data) {
-						if (repository.topics.includes(MetaData.name)) {
+						if (repository.topics.includes(Github.name)) {
 							this.project.push(
 								Object.assign(repository, {
 									images: await this.GetImages(repository.owner.login, repository.name),

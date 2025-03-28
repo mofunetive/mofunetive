@@ -144,7 +144,7 @@ const OutTeamSection = () => {
 									viewport={{ amount: 0.5 }}
 									className="w-fit bg-white whitespace-nowrap overflow-hidden"
 								>
-									<p className="px-8 py-4 text-7xl text-[#2F2F2F]">Fullstack</p>
+									<p className="px-8 py-4 text-7xl text-[#2F2F2F]">{member.metadata?.category}</p>
 								</motion.div>
 							</div>
 						</div>

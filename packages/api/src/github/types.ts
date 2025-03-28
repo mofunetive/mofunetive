@@ -1,4 +1,4 @@
-import { MemberInfo } from "@mofunetive/metadata";
+import type { MemberInfo } from "@mofunetive/metadata";
 import type { components, operations } from "@octokit/openapi-types";
 import type { Endpoints } from "@octokit/types";
 
