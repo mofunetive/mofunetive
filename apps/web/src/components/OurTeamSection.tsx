@@ -29,7 +29,7 @@ const OutTeamSection = () => {
 					<div className=" relative flex">
 						<div className="w-[40%] sm:w-[20%] bg-white"></div>
 						<img
-							src={`${member.html_url}/${member.login}/blob/main/resources/mofunetive/thumbnail.png?raw=true`}
+							src={`${member.html_url}/${member.login}/blob/main/resources/mofunetive/thumbnail.webp?raw=true`}
 							alt={member.login || "Member Avatar"}
 							className="h-[100vh] w-[60%] sm:w-[80%] object-cover"
 							style={{ aspectRatio: "16/9" }}
