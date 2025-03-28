@@ -29,7 +29,6 @@
 		"clean": "bunx rimraf .turbo dist esm tsconfig.tsbuildinfo node_modules",
 		"dev": "bun --watch esbuild.ts --watch",
 		"format": "prettier --write .",
-		"postinstall": "bun run build",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
 	},
@@ -43,14 +42,9 @@
 		"discord-api-types": "0.37.119"
 	},
 	"devDependencies": {
-		"@babel/core": "7.26.10",
 		"@graphql-eslint/eslint-plugin": "4.4.0",
 		"@types/node": "22.13.14",
-		"cross-env": "7.0.3",
 		"graphql": "16.10.0",
-		"ts-loader": "9.5.2",
-		"ts-node": "10.9.2",
-		"tslib": "2.8.1",
 		"typescript": "5.8.2"
 	},
 	"publishConfig": {

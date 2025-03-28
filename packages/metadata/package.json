@@ -27,7 +27,6 @@
 		"clean": "bunx rimraf .turbo dist esm tsconfig.tsbuildinfo node_modules",
 		"dev": "bun --watch esbuild.ts --watch",
 		"format": "prettier --write .",
-		"postinstall": "bun run build",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
 	},

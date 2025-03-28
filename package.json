@@ -20,7 +20,9 @@
 		"dev": "turbo run dev",
 		"fix": "bun --filter '*' lint:fix",
 		"format": "bun --filter '*' format",
+		"postinstall": "bun --silent pkg:build",
 		"lint": "bun --filter '*' lint",
+		"pkg:build": "bun --filter './packages/*' build",
 		"pre-commit": "lint-staged --quiet",
 		"pre-push": "bun --silent lint",
 		"prepare": "is-ci || husky",
@@ -64,7 +66,10 @@
 		"rimraf": "6.0.1",
 		"turbo": "2.4.4"
 	},
-	"packageManager": "bun@1.2.6",
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"packageManager": "bun@1.2.5",
 	"engines": {
 		"bun": ">=1.2.2",
 		"node": ">=20.x",
