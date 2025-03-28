@@ -82,6 +82,21 @@ export class GitHubAPI {
 				})
 				.filter(Boolean);
 
+			const lockedIds = new Set([53_619_535, 48_393_914]);
+			const priorityIds = [53_619_535, 48_393_914];
+
+			this.members.sort((a, b) => {
+				const aId = Number(a.id);
+				const bId = Number(b.id);
+
+				const aPriority = lockedIds.has(aId) ? priorityIds.indexOf(aId) : Infinity;
+				const bPriority = lockedIds.has(bId) ? priorityIds.indexOf(bId) : Infinity;
+
+				if (aPriority !== bPriority) return aPriority - bPriority;
+
+				return aId - bId;
+			});
+
 			return this.members;
 		});
 	}
