@@ -69,9 +69,9 @@
 	"peerDependencies": {
 		"typescript": "^5"
 	},
-	"packageManager": "bun@1.2.5",
+	"packageManager": "bun@1.2.8",
 	"engines": {
-		"bun": ">=1.2.2",
+		"bun": ">=1.2.8",
 		"node": ">=20.x",
 		"pnpm": ">=10.x"
 	}
