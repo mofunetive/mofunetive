@@ -39,7 +39,7 @@
 		"@octokit/rest": "21.1.1",
 		"@octokit/types": "14.0.0",
 		"axios": "1.8.4",
-		"discord-api-types": "0.37.119"
+		"discord-api-types": "0.37.120"
 	},
 	"devDependencies": {
 		"@graphql-eslint/eslint-plugin": "4.4.0",
