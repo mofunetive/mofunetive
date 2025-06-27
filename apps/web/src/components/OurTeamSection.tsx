@@ -19,10 +19,10 @@ const OutTeamSection = () => {
 				initial={{ width: 0 }}
 				whileInView={{ width: "fit-content" }}
 				transition={{ duration: 0.5, ease: "easeInOut" }}
-				viewport={{ amount: 0.5 }}
+				viewport={{ once: true, amount: 0.5 }}
 				className="w-fit bg-[#2F2F2F] whitespace-nowrap overflow-hidden"
 			>
-				s<h1 className="px-4 py-2 text-6xl text-white font-extrabold">Our Team</h1>
+				<h1 className="px-4 py-2 text-6xl text-white font-extrabold">Our Team</h1>
 			</motion.div>
 			{members.map((member, index: number) => (
 				<div key={index} className="max-w-5xl m-auto">

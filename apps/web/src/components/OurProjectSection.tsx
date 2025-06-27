@@ -6,7 +6,7 @@ const OutProjectSection = () => {
 			<motion.div
 				initial={{ width: 0 }}
 				whileInView={{ width: "fit-content" }}
-				transition={{ duration: 1, ease: "easeInOut", origin: 1 }}
+				transition={{ duration: 1, ease: "easeInOut" }}
 				className="w-fit bg-[#2F2F2F] whitespace-nowrap overflow-hidden"
 			>
 				<h1 className="p-4 text-5xl text-white font-extrabold">Our Project</h1>
