@@ -34,7 +34,7 @@
 		]
 	},
 	"dependencies": {
-		"@types/node": "22.14.1",
+		"@types/node": "24.0.10",
 		"esbuild": "0.25.2"
 	},
 	"devDependencies": {
@@ -59,7 +59,7 @@
 		"inquirer": "12",
 		"is-ci": "4.1.0",
 		"jiti": "2.4.2",
-		"lint-staged": "15.5.1",
+		"lint-staged": "16.1.2",
 		"prettier": "^3.5.3",
 		"prettier-plugin-packagejson": "2.5.10",
 		"prettier-plugin-sh": "0.17.2",
