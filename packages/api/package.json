@@ -35,11 +35,11 @@
 	"dependencies": {
 		"@mofunetive/metadata": "1.1.1",
 		"@octokit/graphql-schema": "15.26.0",
-		"@octokit/openapi-types": "25.0.0",
+		"@octokit/openapi-types": "25.1.0",
 		"@octokit/rest": "21.1.1",
-		"@octokit/types": "14.0.0",
-		"axios": "1.8.4",
-		"discord-api-types": "0.37.120"
+		"@octokit/types": "14.1.0",
+		"axios": "1.10.0",
+		"discord-api-types": "0.38.15"
 	},
 	"devDependencies": {
 		"@graphql-eslint/eslint-plugin": "4.4.0",
