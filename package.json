@@ -34,13 +34,13 @@
 		]
 	},
 	"dependencies": {
-		"@types/node": "22.14.1",
+		"@types/node": "25.0.6",
 		"esbuild": "0.25.2"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "19.8.0",
-		"@commitlint/config-conventional": "19.8.0",
-		"@commitlint/cz-commitlint": "19.8.0",
+		"@commitlint/cli": "20.3.1",
+		"@commitlint/config-conventional": "20.3.1",
+		"@commitlint/cz-commitlint": "20.3.1",
 		"@jsdevtools/version-bump-prompt": "6.1.0",
 		"@types/bun": "1.2.10",
 		"@typescript-eslint/eslint-plugin": "8.30.1",
@@ -54,12 +54,12 @@
 		"eslint-plugin-simple-import-sort": "12.1.1",
 		"eslint-plugin-typescript-sort-keys": "3.3.0",
 		"eslint-plugin-unicorn": "56",
-		"git-format-staged": "3.1.1",
+		"git-format-staged": "4.0.1",
 		"husky": "9.1.7",
-		"inquirer": "12",
+		"inquirer": "13",
 		"is-ci": "4.1.0",
 		"jiti": "2.4.2",
-		"lint-staged": "15.5.1",
+		"lint-staged": "16.2.7",
 		"prettier": "^3.5.3",
 		"prettier-plugin-packagejson": "2.5.10",
 		"prettier-plugin-sh": "0.17.2",
