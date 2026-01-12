@@ -31,8 +31,8 @@
 		"lint:fix": "eslint . --fix"
 	},
 	"devDependencies": {
-		"@types/node": "22.14.1",
-		"typescript": "5.8.3"
+		"@types/node": "22.19.5",
+		"typescript": "5.9.3"
 	},
 	"publishConfig": {
 		"access": "public"
